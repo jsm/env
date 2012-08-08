@@ -1,0 +1,1 @@
+My shell environment to share, to save, to remember..... yep.
