@@ -1,13 +1,21 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (load "ws-trim")
 
+;; ws-trim settings
 (global-ws-trim-mode t)
 (set-default 'ws-trim-level 1)
+(add-hook 'ws-trim-method-hook 'no-tabs-hook)
+(defun no-tabs-hook ()
+      (interactive)
+        (if (string/= major-mode "html-mode")
+                  (ws-trim-tabs)))
 
 (put 'upcase-region 'disabled nil)
 
+;; turn off tabs
 (setq-default indent-tabs-mode nil)
 
+;; move directory where backups are saved
 (defvar user-temporary-file-directory
   (concat temporary-file-directory user-login-name "/"))
 (make-directory user-temporary-file-directory t)
@@ -20,6 +28,7 @@
 (setq auto-save-file-name-transforms
       `((".*" ,user-temporary-file-directory t)))
 
+;; ruby mode settings
 (add-hook 'ruby-mode-hook
           (lambda ()
             (setq show-trailing-whitespace t)
@@ -27,13 +36,16 @@
             (setq ruby-indent-tabs-mode f)))
 (setq ruby-indent-level 4)
 
+;; html-mode settings
 (add-hook 'html-mode-hook
           (lambda () (setq indent-tabs-mode nil)))
 
+;; whitespace settings
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
 (autoload 'whitespace-toggle-options "whitespace" "Toggle local `whitespace-mode' options." t)
 
 (global-set-key (kbd "C-x w") 'delete-trailing-whitespace)
+(global-set-key (kbd "C-n") 'newline)
 
 (defun move-line (n)
   "Move the current line up or down by N lines."
@@ -63,16 +75,22 @@
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
+;; aquamacs set opacity
 (add-to-list 'default-frame-alist '(alpha . (80 70)))
+;; aquamacs switch to white on black
+(require 'color-theme)
+(color-theme-tty-dark)
+;; aquamacs remove toolbar
+(tool-bar-mode nil)
 
- (defface extra-whitespace-face
-      '((t (:background "pale green")))
-         "Used for tabs and such.")
- (defvar my-extra-keywords
-      '(("\t" . 'extra-whitespace-face)))
- (add-hook 'emacs-lisp-mode-hook
-              (lambda () (font-lock-add-keywords nil my-extra-keywords)))
- (add-hook 'text-mode-hook
-              (lambda () (font-lock-add-keywords nil my-extra-keywords)))
- (add-hook 'c-mode-common-hook
-                         (lambda () (font-lock-add-keywords nil my-extra-keywords)))
+(defface extra-whitespace-face
+  '((t (:background "pale green")))
+  "Used for tabs and such.")
+(defvar my-extra-keywords
+  '(("\t" . 'extra-whitespace-face)))
+(add-hook 'emacs-lisp-mode-hook
+          (lambda () (font-lock-add-keywords nil my-extra-keywords)))
+(add-hook 'text-mode-hook
+          (lambda () (font-lock-add-keywords nil my-extra-keywords)))
+(add-hook 'c-mode-common-hook
+          (lambda () (font-lock-add-keywords nil my-extra-keywords)))
