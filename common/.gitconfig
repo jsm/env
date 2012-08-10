@@ -91,7 +91,7 @@
     # start git-sh
     sh = !git-sh
 [core]
-    editor = /usr/bin/vim
+	editor = emacs
     autocrlf = false
     excludesfile = ~/.gitignore-global
     whitespace=trailing-space,cr-at-eol

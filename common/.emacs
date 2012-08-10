@@ -6,23 +6,30 @@
 
 (put 'upcase-region 'disabled nil)
 
+(setq-default indent-tabs-mode nil)
+
 (defvar user-temporary-file-directory
   (concat temporary-file-directory user-login-name "/"))
 (make-directory user-temporary-file-directory t)
 (setq backup-by-copying t)
 (setq backup-directory-alist
       `(("." . ,user-temporary-file-directory)
-	(,tramp-file-name-regexp nil)))
+        (,tramp-file-name-regexp nil)))
 (setq auto-save-list-file-prefix
       (concat user-temporary-file-directory ".auto-saves-"))
 (setq auto-save-file-name-transforms
       `((".*" ,user-temporary-file-directory t)))
+
 (add-hook 'ruby-mode-hook
-	  (lambda ()
-	    (setq show-trailing-whitespace t)
-	    (local-set-key "\r" 'reindent-then-newline-and-indent)
-	    (setq ruby-indent-tabs-mode f)))
+          (lambda ()
+            (setq show-trailing-whitespace t)
+            (local-set-key "\r" 'reindent-then-newline-and-indent)
+            (setq ruby-indent-tabs-mode f)))
 (setq ruby-indent-level 4)
+
+(add-hook 'html-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
 (autoload 'whitespace-toggle-options "whitespace" "Toggle local `whitespace-mode' options." t)
 
@@ -57,3 +64,15 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 (add-to-list 'default-frame-alist '(alpha . (80 70)))
+
+ (defface extra-whitespace-face
+      '((t (:background "pale green")))
+         "Used for tabs and such.")
+ (defvar my-extra-keywords
+      '(("\t" . 'extra-whitespace-face)))
+ (add-hook 'emacs-lisp-mode-hook
+              (lambda () (font-lock-add-keywords nil my-extra-keywords)))
+ (add-hook 'text-mode-hook
+              (lambda () (font-lock-add-keywords nil my-extra-keywords)))
+ (add-hook 'c-mode-common-hook
+                         (lambda () (font-lock-add-keywords nil my-extra-keywords)))
