@@ -33,12 +33,16 @@
           (lambda ()
             (setq show-trailing-whitespace t)
             (local-set-key "\r" 'reindent-then-newline-and-indent)
+            (setq indent-tabs-mode nil)
             (setq ruby-indent-tabs-mode f)))
+;;            (add-hook 'before-save-hook
+;;                      (lambda () (if (not indent-tabs-mode)
+;;                                     (untabify (point-min) (point-max)))))))
 (setq ruby-indent-level 4)
 
 ;; html-mode settings
 (add-hook 'html-mode-hook
-          (lambda () (setq indent-tabs-mode nil)))
+          (lambda () (setq indent-tabs-mode t)))
 
 ;; whitespace settings
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
