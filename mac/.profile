@@ -1,6 +1,9 @@
 CLICOLOR=1
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+alias sshcs="ssh cs61c-sx@star.cs.berkeley.edu"
+alias mysql=mysql5
+alias mysqldump=mysqldump5
 alias cdcc="cd ~/Repositories/cc/"
 alias cdcc2="cd ~/Repositories/cc2/"
 alias cdcc3="cd ~/Repositories/cc3/"

@@ -84,8 +84,6 @@
 ;; aquamacs switch to white on black
 (require 'color-theme)
 (color-theme-tty-dark)
-;; aquamacs remove toolbar
-(tool-bar-mode nil)
 
 (defface extra-whitespace-face
   '((t (:background "pale green")))
