@@ -1,19 +1,18 @@
+source ~/.custom.sh
+
 CLICOLOR=1
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+alias sudo="sudo "
 alias sshcs="ssh cs61c-sx@star.cs.berkeley.edu"
 alias mysql=mysql5
 alias mysqldump=mysqldump5
 alias cdcc="cd ~/Repositories/cc/"
 alias cdcc2="cd ~/Repositories/cc2/"
 alias cdcc3="cd ~/Repositories/cc3/"
-alias cdsv="cd ~/Repositories/sv/"
 alias cdsvmain="cd ~/Repositories/sv/html/wp-content/themes/servio"
-alias cdenv="cd ~/Repositories/env/mac"
 alias powl="echo hello"
 alias ls="ls -pFh"
-alias e="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs -nw"
-alias emacs="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
 alias amacs="aquamacs"
 alias a="amacs"
 alias c="choose"
