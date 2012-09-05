@@ -16,6 +16,7 @@ alias ls="ls -pFh"
 alias e="emacs -nw"
 alias amacs="aquamacs"
 alias a="amacs"
+alias c="choose"
 search () {
 find . -name \*$1\*
 }
@@ -33,6 +34,19 @@ do
 	break
     fi
     amacs "$opt" &
+    break
+    done
+}
+
+cmate () {
+    PS3="Choose a file to edit: "
+    select opt in $(find . -name \*$1\*) quit
+    do
+    if [[ $opt = "quit" ]]
+    then
+        break
+    fi
+    mate "$opt" &
     break
     done
 }
