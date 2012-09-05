@@ -75,3 +75,11 @@ sym () {
     mv $1 $2
     ln -s $2$1
 }
+
+setupwork () {
+    rvm use ree-1.8.7-2011.03@cc
+}
+
+setuphome () {
+    rvm use ruby-1.9.3-p194@home
+}
