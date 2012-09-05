@@ -4,7 +4,8 @@ CLICOLOR=1
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias sudo="sudo "
-alias sshcs="ssh cs61c-sx@star.cs.berkeley.edu"
+alias sshcs="ssh cs61c-sx@hive3.cs.berkeley.edu"
+alias cdcs="cd ~/Repositories/cs"
 alias mysql=mysql5
 alias mysqldump=mysqldump5
 alias cdcc="cd ~/Repositories/cc/"
@@ -75,4 +76,12 @@ newrepo () {
 sym () {
     mv $1 $2
     ln -s $2$1
+}
+
+setupwork () {
+    rvm use ree-1.8.7-2011.03@cc
+}
+
+setuphome () {
+    rvm use ruby-1.9.3-p194@home
 }
