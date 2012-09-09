@@ -6,6 +6,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias sudo="sudo "
 alias sshcs="ssh cs61c-sx@hive3.cs.berkeley.edu"
 alias cdcs="cd ~/Repositories/cs"
+alias cdr="cd ~/Repositories/"
 alias mysql=mysql5
 alias mysqldump=mysqldump5
 alias cdcc="cd ~/Repositories/cc/"
@@ -79,9 +80,9 @@ sym () {
 }
 
 setupwork () {
-    rvm use ree-1.8.7-2011.03@cc
+    rvm use ree-1.8.7-2011.03@cc --default
 }
 
 setuphome () {
-    rvm use ruby-1.9.3-p194@home
+    rvm use ruby-1.9.3-p194@home --default
 }
