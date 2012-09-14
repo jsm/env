@@ -40,6 +40,11 @@
 ;;                                     (untabify (point-min) (point-max)))))))
 (setq ruby-indent-level 4)
 
+;; c mode settings
+(add-hook 'c-mode-hook
+          (lambda ()
+            (setq c-basic-offset 4)))
+
 ;; html-mode settings
 (add-hook 'html-mode-hook
           (lambda () (setq indent-tabs-mode t)))
