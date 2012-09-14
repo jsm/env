@@ -86,3 +86,14 @@ setupwork () {
 setuphome () {
     rvm use ruby-1.9.3-p194@home --default
 }
+
+c () {
+    gcc $1
+    ./a.out
+}
+
+submit () {
+    git commit -m $1" submission"
+    git tag -f $1
+    git push --tags origin master
+}
