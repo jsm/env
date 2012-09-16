@@ -79,7 +79,7 @@
   (interactive "p")
   (move-line (if (null n) 1 n)))
 
-(global-set-key (kbd "ESC <up>") 'move-line-u)
+(global-set-key (kbd "ESC <up>") 'move-line-up)
 (global-set-key (kbd "ESC <down>") 'move-line-down)
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
