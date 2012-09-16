@@ -103,3 +103,9 @@ submit () {
     git tag -f $1
     git push --tags origin master
 }
+
+/opt/local/share/java/hadoop-1.0.3
+export HADOOP_HOME=/opt/local/share/java/hadoop-1.0.3
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$HADOOP_HOME/bin
+export HADOOP_HOME_WARN_SUPPRESS=1

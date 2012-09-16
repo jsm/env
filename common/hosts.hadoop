@@ -1,0 +1,58 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost 
+fe80::1%lo0	localhost
+
+50.56.66.147 www2.serv.io <http://www2.serv.io/>
+
+127.0.0.1 fe.local.cloudcrowd.com api.local.cloudcrowd.com admin.local.cloudcrowd.com payments.local.cloudcrowd.com wopr.local.cloudcrowd.com bento.local.cloudcrowd.com proxy.local.cloudcrowd.com data.local.cloudcrowd.com papi.local.cloudcrowd.com
+127.0.0.1 app.local.serv.io api.local.serv.io admin.local.serv.io data.local.serv.io affiliate.local.serv.io konstruct.local.serv.io
+
+#Begin Mod
+173.203.96.199 mdb-s1-arbiter1.rsc.cloudcrowd.com mdb-s1-arbiter1
+173.203.97.15 rlb2.rsc.cloudcrowd.com rlb2
+184.106.200.200 base-server.rsc.cloudcrowd.com base-server
+184.106.196.62 mysql3.rsc.cloudcrowd.com mysql3
+184.106.208.27 log1.rsc.cloudcrowd.com log1
+184.106.231.109 corp1.rsc.cloudcrowd.com corp1
+184.106.233.159 dm-build.rsc.cloudcrowd.com dm-build
+184.106.221.214 xfe1.rsc.cloudcrowd.com xfe1
+184.106.247.38 web-staging1.rsc.cloudcrowd.com web-staging1
+184.106.215.21 staging1.rsc.cloudcrowd.com staging1
+184.106.225.57 xapi1.rsc.cloudcrowd.com xapi1
+184.106.227.148 admin1.rsc.cloudcrowd.com admin1
+184.106.227.68 fe1.rsc.cloudcrowd.com fe1
+184.106.222.98 fe2.rsc.cloudcrowd.com fe2
+184.106.247.231 api1.rsc.cloudcrowd.com api1
+184.106.213.225 api2.rsc.cloudcrowd.com api2
+50.56.76.25 integration.rsc.cloudcrowd.com integration
+184.106.217.208 xapi2.rsc.cloudcrowd.com xapi2
+184.106.223.105 xfe2.rsc.cloudcrowd.com xfe2
+184.106.213.127 rlb1.rsc.cloudcrowd.com rlb1
+184.106.164.65 knacker-staging1.rsc.cloudcrowd.com knacker-staging1
+184.106.252.92 knacker1.rsc.cloudcrowd.com knacker1
+184.106.252.237 knacker3.rsc.cloudcrowd.com knacker3
+184.106.252.99 knacker2.rsc.cloudcrowd.com knacker2
+184.106.174.208 mysql1.rsc.cloudcrowd.com mysql1
+184.106.174.211 mysql2.rsc.cloudcrowd.com mysql2
+50.56.78.55 jira.rsc.cloudcrowd.com jira
+50.56.70.110 daemon2.rsc.cloudcrowd.com daemon2
+184.106.76.220 mdb-s1-r1.rsc.cloudcrowd.com mdb-s1-r1
+184.106.76.101 mdb-s1-r2.rsc.cloudcrowd.com mdb-s1-r2
+50.56.70.177 daemon1.rsc.cloudcrowd.com daemon1
+184.106.76.218 qa-2.rsc.cloudcrowd.com qa-2
+50.56.68.115 data2.rsc.cloudcrowd.com data2
+50.56.66.147 web1.rsc.cloudcrowd.com web1
+50.56.75.107 rmq2.rsc.cloudcrowd.com rmq2
+173.193.175.194 mysql1.sl.serv.io mysql1
+173.193.175.195 data1.sl.serv.io data1
+184.173.102.10 knacker1.sl.serv.io knacker1
+184.173.102.11 stack1.sl.serv.io stack1
+
+#End Mod
