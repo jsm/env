@@ -101,3 +101,17 @@ submit () {
     git tag -f $1
     git push --tags origin master
 }
+
+hp1 () {
+    make
+    rm -rf iDir
+    rm -rf oDir
+    hadoop jar proj1.jar  Proj1 -conf conf.xml billOfRights.txt.seq iDir oDir
+}
+
+hp1c () {
+    make
+    rm -rf iDir
+    rm -rf oDir
+    hadoop jar proj1.jar  Proj1 -Dcombiner=true -conf conf.xml billOfRights.txt.seq iDir oDir
+}
