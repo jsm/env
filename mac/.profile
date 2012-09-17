@@ -16,7 +16,7 @@ alias cdcc3="cd ~/Repositories/cc3/"
 alias cdsv="cd ~/Repositories/sv/"
 alias cdsvmain="cd ~/Repositories/sv/html/wp-content/themes/servio"
 alias cdenv="cd ~/Repositories/env"
-alias myenv="cd ~/env"
+alias myenv="cd -P ~/env"
 
 alias ls="ls -pFh"
 alias amacs="aquamacs"
