@@ -101,3 +101,6 @@
           (lambda () (font-lock-add-keywords nil my-extra-keywords)))
 (add-hook 'c-mode-common-hook
           (lambda () (font-lock-add-keywords nil my-extra-keywords)))
+
+;; force tab
+(global-set-key (kbd "C-<tab>") 'tab-to-tab-stop)
