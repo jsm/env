@@ -21,7 +21,7 @@ alias myenv="cd -P ~/env"
 alias ls="ls -pFh"
 alias amacs="aquamacs"
 alias a="amacs"
-alias c="choose"
+alias ch="choose"
 
 alias mysql=mysql5
 alias mysqldump=mysqldump5
