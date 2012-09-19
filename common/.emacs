@@ -1,4 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
+;; load some files
+(require 'rspec-mode)
+
 (load "ws-trim")
 
 ;; ws-trim settings
@@ -104,3 +107,4 @@
 
 ;; force tab
 (global-set-key (kbd "C-<tab>") 'tab-to-tab-stop)
+
