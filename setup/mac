@@ -1,3 +1,10 @@
+if [ $# -ne 1 ]
+then
+    echo "Error in $0 - Invalid Argument Count"
+    echo "Syntax: $0 env_directory"
+    exit
+fi
+
 rm ~/env
 rm ~/.bash_profile
 rm ~/.profile
