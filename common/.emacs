@@ -1,8 +1,13 @@
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/rhtml-mode/")
+
 ;; load some files
 (require 'rspec-mode)
-
+(require 'rhtml-mode)
 (load "ws-trim")
+
+;; mode stuff
+(setq auto-mode-alist (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
 
 ;; ws-trim settings
 (global-ws-trim-mode t)
@@ -51,6 +56,11 @@
 ;; html-mode settings
 (add-hook 'html-mode-hook
           (lambda () (setq indent-tabs-mode t)))
+
+;; rhtml-mode settings
+(add-hook 'rhtml-mode-hook
+          (lambda ()
+            (rinari-launch)))
 
 ;; whitespace settings
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
