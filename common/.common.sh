@@ -21,6 +21,10 @@ alias ch="choose"
 alias mysql=mysql5
 alias mysqldump=mysqldump5
 
+gr () {
+    cd $(git rev-parse --show-toplevel)
+}
+
 search () {
 find . -name \*$1\*
 }
