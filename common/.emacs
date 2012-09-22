@@ -23,6 +23,9 @@
 ;; turn off tabs
 (setq-default indent-tabs-mode nil)
 
+;; set line width
+(setq-default fill-column 120)
+
 ;; move directory where backups are saved
 (defvar user-temporary-file-directory
   (concat temporary-file-directory user-login-name "/"))
