@@ -55,11 +55,19 @@
 
 ;; html-mode settings
 (add-hook 'html-mode-hook
-          (lambda () (setq indent-tabs-mode t)))
+          (lambda ()
+            (setq sgml-basic-offset 4)
+            (setq indent-tabs-mode t)))
 
 ;; rhtml-mode settings
 (add-hook 'rhtml-mode-hook
           (lambda ()
+            (setq sgml-basic-offset 4)
+            (setq tab-width 4)
+            (setq show-trailing-whitespace t)
+            (local-set-key "\r" 'reindent-then-newline-and-indent)
+            (setq indent-tabs-mode nil)
+            (setq ruby-indent-tabs-mode f)
             (rinari-launch)))
 
 ;; whitespace settings
