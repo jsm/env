@@ -26,6 +26,9 @@
 ;; set line width
 (setq-default fill-column 120)
 
+;; set tab stops
+(setq tab-stop-list (number-sequence 4 120 4))
+
 ;; move directory where backups are saved
 (defvar user-temporary-file-directory
   (concat temporary-file-directory user-login-name "/"))
