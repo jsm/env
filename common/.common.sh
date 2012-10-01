@@ -67,12 +67,20 @@ setuphome () {
 }
 
 c () {
-    gcc $1
+    gcc -std=c99 $1
     ./a.out
 }
 
 submit () {
     git commit -m $1" submission"
     git tag -f $1
-    git push --tags origin master
+    git push -f --tags origin master
+}
+
+check () {
+    mkdir ~/Repositories/tmp
+    cd ~/Repositories/tmp
+    git init
+    git remote add origin cs61c-sx@hive3.cs.berkeley.edu:~cs61c/git/repos/cs61c-sx
+    git pull origin $1
 }
