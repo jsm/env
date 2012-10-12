@@ -9,6 +9,10 @@
 ;; mode stuff
 (setq auto-mode-alist (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
 ;; ws-trim settings
 (global-ws-trim-mode t)
 (set-default 'ws-trim-level 1)
@@ -25,6 +29,9 @@
 
 ;; set line width
 (setq-default fill-column 120)
+
+;; set tab stops
+(setq tab-stop-list (number-sequence 4 120 4))
 
 ;; move directory where backups are saved
 (defvar user-temporary-file-directory
