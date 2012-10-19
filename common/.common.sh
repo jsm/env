@@ -59,11 +59,15 @@ sym () {
 }
 
 setupwork () {
-    rvm use ree-1.8.7-2011.03@cc --default
+    rvm use ree-1.8.7-2012.02@cc --default
 }
 
 setuphome () {
     rvm use ruby-1.9.3-p194@home --default
+}
+
+setupgrade () {
+    rvm use ruby-1.9.3-p194@cc --default
 }
 
 c () {
