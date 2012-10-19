@@ -4,7 +4,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 alias sudo="sudo "
 
-alias sshcs="ssh cs61c-sx@hive3.cs.berkeley.edu"
+alias sshcs="ssh cs61c-sx@hive8.cs.berkeley.edu"
 
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
