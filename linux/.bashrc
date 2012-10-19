@@ -1,5 +1,5 @@
-source ~/env/.custom.sh
-source ~/env/.common.sh
+source ~/.env/.custom.sh
+source ~/.env/.common.sh
 
 
 alias ls="ls -Fh --color=auto"
