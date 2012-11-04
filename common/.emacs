@@ -61,7 +61,7 @@
 ;; c mode settings
 (add-hook 'c-mode-hook
           (lambda ()
-            (setq c-basic-offset 4)))
+            (setq c-basic-offset 2)))
 
 ;; html-mode settings
 (add-hook 'html-mode-hook
