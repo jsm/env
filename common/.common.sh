@@ -21,6 +21,8 @@ alias ch="choose"
 alias mysql=mysql5
 alias mysqldump=mysqldump5
 
+alias envup="(cdenv ; git pull)"
+
 gr () {
     cd $(git rev-parse --show-toplevel)
 }
