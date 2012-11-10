@@ -8,6 +8,7 @@ alias sshcs="ssh cs61c-sx@hive8.cs.berkeley.edu"
 
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
+alias cds="cd ~/Repositories/scripts"
 alias cdcc="cd ~/Repositories/cc/"
 alias cdcc2="cd ~/Repositories/cc2/"
 alias cdcc3="cd ~/Repositories/cc3/"
