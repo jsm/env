@@ -90,3 +90,50 @@ check () {
     git remote add origin cs61c-sx@hive3.cs.berkeley.edu:~cs61c/git/repos/cs61c-sx
     git pull origin $1
 }
+
+gg_replace() {
+    if [[ "$#" == "0" ]]; then
+        echo 'Usage:'
+        echo '  gg_replace term replacement file_mask'
+        echo
+        echo 'Example:'
+        echo '  gg_replace cappuchino cappuccino *.html'
+        echo
+    else
+        find=$1; shift
+        replace=$1; shift
+
+        ORIG_GLOBIGNORE=$GLOBIGNORE
+        GLOBIGNORE=*.*
+
+        if [[ "$#" = "0" ]]; then
+            set -- ' ' $@
+        fi
+
+        while [[ "$#" -gt "0" ]]; do
+            for file in `git grep -l $find -- $1`; do
+                sed -e "s/$find/$replace/g" -i'' $file
+            done
+            shift
+        done
+
+        GLOBIGNORE=$ORIG_GLOBIGNORE
+    fi
+}
+gg_dasherize() {
+    gg_replace $1 `echo $1 | sed -e 's/_/-/g'` $2
+}
+
+GStoVFsub () {
+    for i in $(git grep --full-name -l "getsatisfaction.com/cloudcrowd/topics/")
+    do
+        perl -p -i -e 's/getsatisfaction\.com\/cloudcrowd\/topics/forum\.cloudcrowd\.com\/categories/g' $i
+    done
+}
+
+GStoVFmain () {
+    for i in $(git grep --full-name -l "getsatisfaction.com/cloudcrowd")
+    do
+        perl -p -i -e 's/getsatisfaction\.com\/cloudcrowd/forum\.cloudcrowd\.com/g' $i
+    done
+}
