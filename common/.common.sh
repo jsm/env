@@ -127,14 +127,11 @@ gg_dasherize() {
     gg_replace $1 `echo $1 | sed -e 's/_/-/g'` $2
 }
 
-GStoVFsub () {
-    for i in $(git grep --full-name -l "getsatisfaction.com/cloudcrowd/topics/")
+GStoVF () {
+    for i in $(git grep --full-name -l "\"http:\/\/getsatisfaction\.com\/cloudcrowd\/topics[^\"]*\"")
     do
-        perl -p -i -e 's/getsatisfaction\.com\/cloudcrowd\/topics/forum\.cloudcrowd\.com\/categories/g' $i
+        perl -p -i -e 's/\"http:\/\/getsatisfaction\.com\/cloudcrowd\/topics[^\"]*\"/\"http:\/\/forum\.cloudcrowd\.com\"/g' $i
     done
-}
-
-GStoVFmain () {
     for i in $(git grep --full-name -l "getsatisfaction.com/cloudcrowd")
     do
         perl -p -i -e 's/getsatisfaction\.com\/cloudcrowd/forum\.cloudcrowd\.com/g' $i
