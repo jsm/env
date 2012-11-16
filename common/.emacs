@@ -5,6 +5,8 @@
 (require 'rspec-mode)
 (require 'rhtml-mode)
 (load "ws-trim")
+(require 'project-mode)
+(project-load-all) ; Loads all saved projects.
 
 ;; mode stuff
 (setq auto-mode-alist (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
