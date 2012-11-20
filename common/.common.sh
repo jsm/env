@@ -4,6 +4,8 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 alias sudo="sudo "
 
+alias jServ="ssh -p 6464 -A jsm@jsm"
+
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
 alias cds="cd ~/Repositories/scripts"
