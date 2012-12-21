@@ -8,6 +8,7 @@ alias jserv="ssh -p 6464 -A jsm@jsm"
 
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
+alias cdt="cd ~/Repositories/taghub"
 alias cds="cd ~/Repositories/scripts"
 alias cdcc="cd ~/Repositories/cc/"
 alias cdcc2="cd ~/Repositories/cc2/"
@@ -72,6 +73,10 @@ setuphome () {
 
 setupgrade () {
     rvm use 1.9.3@cc --default
+}
+
+setuptag () {
+    rvm use 1.9.3@tag --default
 }
 
 c () {

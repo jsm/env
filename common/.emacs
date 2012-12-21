@@ -11,6 +11,14 @@
 ;; mode stuff
 (setq auto-mode-alist (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
 
+(setq auto-mode-alist
+      (append
+       '(("\\.C\\'" . c++-mode)
+         ("\\.rake\\'" . ruby-mode)
+         ("\\.css\\'" . css-mode)
+         ("\\.scss\\'" . css-mode))
+       auto-mode-alist))
+
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
@@ -20,9 +28,9 @@
 (set-default 'ws-trim-level 1)
 (add-hook 'ws-trim-method-hook 'no-tabs-hook)
 (defun no-tabs-hook ()
-      (interactive)
-        (if (string/= major-mode "html-mode")
-                  (ws-trim-tabs)))
+  (interactive)
+  (if (string/= major-mode "html-mode")
+      (ws-trim-tabs)))
 
 (put 'upcase-region 'disabled nil)
 
