@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/rhtml-mode/")
 (add-to-list 'load-path "~/.emacs.d/nxhtml/")
+(load-file "~/.emacs.d/nxhtml/autostart.el")
 
 ;; load some files
 (require 'rspec-mode)
@@ -17,7 +18,8 @@
        '(("\\.C\\'" . c++-mode)
          ("\\.rake\\'" . ruby-mode)
          ("\\.css\\'" . css-mode)
-         ("\\.scss\\'" . css-mode))
+         ("\\.scss\\'" . css-mode)
+         ("\\.php\\'" . nxhtml-mode))
        auto-mode-alist))
 
 (setq-default indent-tabs-mode nil)
@@ -70,11 +72,9 @@
 (setq ruby-indent-level 4)
 
 ;; php mode
-(autoload 'nxhtml-mode "nxhtml-mode" "Major mode for editing php code." t)
-(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
-(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 (add-hook 'nxhtml-mode-hook
           (lambda ()
+            (setq nxml-child-indent 4)
             (setq show-trailing-whitespace t)
             (local-set-key "\r" 'reindent-then-newline-and-indent)
             (setq indent-tabs-mode nil)))
