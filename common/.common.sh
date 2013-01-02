@@ -5,9 +5,11 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias sudo="sudo "
 
 alias jserv="ssh -p 6464 -A jsm@sanmiguel.je"
+alias sshbare="ssh -p 6464 -A jsm@108.166.120.88"
 
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
+alias cdt="cd ~/Repositories/taghub"
 alias cds="cd ~/Repositories/scripts"
 alias cdp="cd ~/Repositories/projects"
 alias cdcc="cd ~/Repositories/cc/"
@@ -73,6 +75,10 @@ setuphome () {
 
 setupgrade () {
     rvm use 1.9.3@cc --default
+}
+
+setuptag () {
+    rvm use 1.9.3@tag --default
 }
 
 c () {

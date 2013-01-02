@@ -1,5 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/rhtml-mode/")
+(add-to-list 'load-path "~/.emacs.d/nxhtml/")
+(load-file "~/.emacs.d/nxhtml/autostart.el")
 
 ;; load some files
 (require 'rspec-mode)
@@ -12,6 +14,15 @@
 (add-to-list 'auto-mode-alist '("[.]erb$" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("[.]stub_data$" . javascript-mode))
 
+(setq auto-mode-alist
+      (append
+       '(("\\.C\\'" . c++-mode)
+         ("\\.rake\\'" . ruby-mode)
+         ("\\.css\\'" . css-mode)
+         ("\\.scss\\'" . css-mode)
+         ("\\.php\\'" . nxhtml-mode))
+       auto-mode-alist))
+
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
@@ -21,9 +32,9 @@
 (set-default 'ws-trim-level 1)
 (add-hook 'ws-trim-method-hook 'no-tabs-hook)
 (defun no-tabs-hook ()
-      (interactive)
-        (if (string/= major-mode "html-mode")
-                  (ws-trim-tabs)))
+  (interactive)
+  (if (string/= major-mode "html-mode")
+      (ws-trim-tabs)))
 
 (put 'upcase-region 'disabled nil)
 
@@ -60,6 +71,14 @@
 ;;                      (lambda () (if (not indent-tabs-mode)
 ;;                                     (untabify (point-min) (point-max)))))))
 (setq ruby-indent-level 4)
+
+;; php mode
+(add-hook 'nxhtml-mode-hook
+          (lambda ()
+            (setq nxml-child-indent 4)
+            (setq show-trailing-whitespace t)
+            (local-set-key "\r" 'reindent-then-newline-and-indent)
+            (setq indent-tabs-mode nil)))
 
 ;; c mode settings
 (add-hook 'c-mode-hook
