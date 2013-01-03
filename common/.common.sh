@@ -23,6 +23,7 @@ alias myenv="cd -P ~/.env"
 alias ch="choose"
 
 alias envup="(cdenv ; git pull)"
+alias envst="(cdenv ; git st)"
 
 gr () {
     cd $(git rev-parse --show-toplevel)
