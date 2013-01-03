@@ -2,8 +2,15 @@ source ~/.env/.custom.sh
 source ~/.env/.common.sh
 
 alias ls="ls -pFh"
+
+alias aquqmacs2="open /Applications/Aquqmacs2.app/"
+
 alias amacs="aquamacs"
-alias a="amacs"
+alias amacs2="aquamacs2"
+alias aamacs2="aquamacs2"
+alias a="aquamacs"
+alias a2="aquamacs2"
+alias aa="aquamacs2"
 
 alias mysql=mysql5
 alias mysqldump=mysqldump5
