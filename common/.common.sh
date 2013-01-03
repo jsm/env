@@ -32,6 +32,11 @@ search () {
     find . -name \*$1\*
 }
 
+delete_all () {
+    find . -type f -name $1 -o -type l -name $1 -exec rm -f {} \;
+}
+alias remove_all="delete_all"
+
 jssh () {
     ssh -A jon@$1
 }

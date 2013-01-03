@@ -3,7 +3,15 @@ source ~/.env/.common.sh
 
 alias ls="ls -pFh"
 
-alias aquqmacs2="open /Applications/Aquqmacs2.app/"
+function aquamacs2
+ {
+     # Create the files as needed -- not as good as raw emacs, but acceptable
+     for f in "$@"
+     do
+         test -e $f || touch $f
+     done
+     open -a /Applications/Aquamacs2.app/ "$@"
+ }
 
 alias amacs="aquamacs"
 alias amacs2="aquamacs2"
