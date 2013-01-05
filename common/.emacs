@@ -11,7 +11,8 @@
 (project-load-all) ; Loads all saved projects.
 
 ;; mode stuff
-(setq auto-mode-alist (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("[.]erb$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("[.]stub_data$" . javascript-mode))
 
 (setq auto-mode-alist
       (append
@@ -90,6 +91,11 @@
             (setq sgml-basic-offset 4)
             (setq indent-tabs-mode t)))
 
+;; xml-mode settings
+(add-hook 'nxml-mode-hook
+          (lambda ()
+            (setq nxml-child-indent 4)))
+
 ;; rhtml-mode settings
 (add-hook 'rhtml-mode-hook
           (lambda ()
@@ -154,9 +160,6 @@
 (add-hook 'c-mode-common-hook
           (lambda () (font-lock-add-keywords nil my-extra-keywords)))
 
-;; force tab
-(global-set-key (kbd "C-<tab>") 'tab-to-tab-stop)
-
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
@@ -167,3 +170,25 @@
   (yank)
   )
 (global-set-key (kbd "C-d") 'duplicate-line)
+
+;; Indent Rigidly N
+(defun indent-rigidly-n (n)
+  "Indent the region, or otherwise the current line, by N spaces."
+  (let* ((use-region (and transient-mark-mode mark-active))
+         (rstart (if use-region (region-beginning) (point-at-bol)))
+         (rend   (if use-region (region-end)       (point-at-eol)))
+         (deactivate-mark "irrelevant")) ; avoid deactivating mark
+    (indent-rigidly rstart rend n)))
+(defun indent-rigidly-4 ()
+  "Indent the region, or otherwise the current line, by 4 spaces."
+  (interactive)
+  (indent-rigidly-n 4))
+(defun outdent-rigidly-4 ()
+  "Indent the region, or otherwise the current line, by -4 spaces."
+  (interactive)
+  (indent-rigidly-n -4))
+(global-set-key (kbd "M-<tab>") 'indent-rigidly-4)
+(global-set-key (kbd "C-M-<tab>") 'outdent-rigidly-4)
+
+;; force tab
+(global-set-key (kbd "C-<tab>") 'tab-to-tab-stop)

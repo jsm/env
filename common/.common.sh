@@ -11,6 +11,7 @@ alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
 alias cdt="cd ~/Repositories/taghub"
 alias cds="cd ~/Repositories/scripts"
+alias cdp="cd ~/Repositories/projects"
 alias cdcc="cd ~/Repositories/cc/"
 alias cdcc2="cd ~/Repositories/cc2/"
 alias cdcc3="cd ~/Repositories/cc3/"
@@ -22,6 +23,7 @@ alias myenv="cd -P ~/.env"
 alias ch="choose"
 
 alias envup="(cdenv ; git pull)"
+alias envst="(cdenv ; git st)"
 
 gr () {
     cd $(git rev-parse --show-toplevel)
@@ -30,6 +32,11 @@ gr () {
 search () {
     find . -name \*$1\*
 }
+
+delete_all () {
+    find . -type f -name $1 -o -type l -name $1 -exec rm -f {} \;
+}
+alias remove_all="delete_all"
 
 jssh () {
     ssh -A jon@$1
@@ -65,7 +72,7 @@ sym () {
 }
 
 setupwork () {
-    rvm use ree@cc --default
+    rvm use 1.9.3-p194@cc --default
 }
 
 setuphome () {
