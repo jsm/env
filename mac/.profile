@@ -48,3 +48,17 @@ cmate () {
     break
     done
 }
+
+ggc () {
+    git grep "$1"
+    PS3="Choose a file to edit: "
+    select opt in $(git grep -l "$1") quit
+    do
+    if [[ $opt = "quit" ]]
+    then
+        break
+    fi
+    amacs "$opt" &
+    break
+    done
+}
