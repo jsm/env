@@ -92,12 +92,6 @@ c () {
     ./a.out
 }
 
-submit () {
-    git commit -m $1" submission"
-    git tag -f $1
-    git push -f --tags origin master
-}
-
 check () {
     mkdir ~/Repositories/tmp
     cd ~/Repositories/tmp

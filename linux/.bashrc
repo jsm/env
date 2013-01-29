@@ -1,6 +1,14 @@
 source ~/.env/.custom.sh
 source ~/.env/.common.sh
 
+[[ -z ${MASTER} ]] && export MASTER=${LOGNAME%-*}
+[[ -z ${MASTERDIR} ]] && export MASTERDIR=$(eval echo ~${MASTER})
+
+# Set up class wide settings
+for file in ${MASTERDIR}/adm/bashrc.d/* ; do [[ -x ${file} ]] && . "${file}"; done
+
+# Set up local settings
+for file in ${HOME}/bashrc.d/* ; do [[ -x ${file} ]] && . "${file}"; done
 
 alias ls="ls -Fh --color=auto"
 
