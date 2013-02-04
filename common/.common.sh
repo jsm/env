@@ -10,6 +10,7 @@ alias sshbare="ssh -p 6464 -A jsm@108.166.120.88"
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
 alias cdt="cd ~/Repositories/taghub"
+alias cdb="cd ~/Repositories/bareapp"
 alias cds="cd ~/Repositories/scripts"
 alias cdp="cd ~/Repositories/projects"
 alias cdcc="cd ~/Repositories/cc/"
@@ -42,8 +43,12 @@ jssh () {
     ssh -A jon@$1
 }
 
-sshcs () {
-    ssh -A cs61c-sx@$1
+sshcs70 () {
+    ssh -A cs70-ox@$1
+}
+
+sshcs188 () {
+    ssh -A cs188-my@$1
 }
 
 tc ()
@@ -81,6 +86,10 @@ setuphome () {
 
 setupgrade () {
     rvm use 1.9.3@cc --default
+}
+
+setupbare () {
+    rvm use 1.9.3@bareapp --default
 }
 
 setuptag () {
