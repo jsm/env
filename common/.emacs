@@ -102,8 +102,7 @@
             (setq show-trailing-whitespace t)
             (local-set-key "\r" 'reindent-then-newline-and-indent)
             (setq indent-tabs-mode nil)
-            (setq ruby-indent-tabs-mode f)
-            (rinari-launch)))
+            (setq ruby-indent-tabs-mode f)))
 
 ;; whitespace settings
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
