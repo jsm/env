@@ -6,6 +6,7 @@ alias sudo="sudo "
 
 alias jserv="ssh -p 6464 -A jsm@sanmiguel.je"
 alias sshbare="ssh -p 6464 -A jsm@108.166.120.88"
+alias sshocf="ssh ssh.ocf.berkeley.edu"
 
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
