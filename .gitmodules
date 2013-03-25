@@ -1,0 +1,6 @@
+[submodule "mmm-mode"]
+	path = mmm-mode
+	url = git@github.com:purcell/mmm-mode.git
+[submodule "web-mode"]
+	path = web-mode
+	url = git@github.com:fxbois/web-mode.git

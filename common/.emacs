@@ -1,22 +1,29 @@
+;; Don't Show Warnings
+(setq warning-minimum-level 'error)
+(setq warning-minimum-log-level 'error)
+
 (add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/rhtml-mode/")
-(add-to-list 'load-path "~/.emacs.d/nxhtml/")
 (add-to-list 'load-path "~/.emacs.d/ecb/")
-(load-file "~/.emacs.d/nxhtml/autostart.el")
+(add-to-list 'load-path "~/.emacs.d/web-mode/")
 
 ;; load some files
 (require 'rspec-mode)
-(require 'rhtml-mode)
 (require 'simple-wiki)
 (require 'ecb-autoloads)
+(require 'web-mode)
 (load "ws-trim")
 
-(setq stack-trace-on-error t)
-
 ;; mode stuff
-(add-to-list 'auto-mode-alist '("[.]erb$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("[.]stub_data$" . javascript-mode))
 (add-to-list 'auto-mode-alist '("[.]wiki$" . simple-wiki-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 (setq auto-mode-alist
       (append
@@ -24,8 +31,7 @@
          ("\\.rake\\'" . ruby-mode)
          ("\\.css\\'" . css-mode)
          ("\\.scss\\'" . css-mode)
-         ("\\.php\\'" . nxhtml-mode))
-       auto-mode-alist))
+         auto-mode-alist)))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -76,13 +82,13 @@
 ;;                                     (untabify (point-min) (point-max)))))))
 (setq ruby-indent-level 4)
 
-;; php mode
-(add-hook 'nxhtml-mode-hook
+;; web mode
+(add-hook 'web-mode-hook
           (lambda ()
-            (setq nxml-child-indent 4)
+            (setq web-mode-markup-indent-offset 4)
             (setq show-trailing-whitespace t)
             (local-set-key "\r" 'reindent-then-newline-and-indent)
-            (setq indent-tabs-mode nil)))
+            (setq indent-tabs-mode t)))
 
 ;; c mode settings
 (add-hook 'c-mode-hook
@@ -99,16 +105,6 @@
 (add-hook 'nxml-mode-hook
           (lambda ()
             (setq nxml-child-indent 4)))
-
-;; rhtml-mode settings
-(add-hook 'rhtml-mode-hook
-          (lambda ()
-            (setq sgml-basic-offset 4)
-            (setq tab-width 4)
-            (setq show-trailing-whitespace t)
-            (local-set-key "\r" 'reindent-then-newline-and-indent)
-            (setq indent-tabs-mode nil)
-            (setq ruby-indent-tabs-mode nil)))
 
 ;; whitespace settings
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
