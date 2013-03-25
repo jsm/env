@@ -2,6 +2,9 @@
 (setq warning-minimum-level 'error)
 (setq warning-minimum-log-level 'error)
 
+;; Follow symlinks
+(setq vc-follow-symlinks t)
+
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/ecb/")
 (add-to-list 'load-path "~/.emacs.d/web-mode/")
@@ -24,14 +27,10 @@
 (add-to-list 'auto-mode-alist '("[.]stub_data$" . javascript-mode))
 (add-to-list 'auto-mode-alist '("[.]wiki$" . simple-wiki-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
-(setq auto-mode-alist
-      (append
-       '(("\\.C\\'" . c++-mode)
-         ("\\.rake\\'" . ruby-mode)
-         ("\\.css\\'" . css-mode)
-         ("\\.scss\\'" . css-mode)
-         auto-mode-alist)))
+(add-to-list 'auto-mode-alist '("\\.C\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
