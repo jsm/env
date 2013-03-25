@@ -85,11 +85,11 @@ setupwork () {
 }
 
 setuphome () {
-    rvm use ruby-1.9.3-p194@home --default
+    rvm use ruby-1.9.3-p392@home --default
 }
 
-setupgrade () {
-    rvm use 1.9.3@cc --default
+setupgrading () {
+    rvm use 1.9.3@grading --default
 }
 
 setupbare () {
