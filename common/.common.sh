@@ -28,6 +28,8 @@ alias ch="choose"
 alias envup="(cdenv ; git pull)"
 alias envst="(cdenv ; git st)"
 
+alias prackup="CC_ENV=production rackup"
+
 gr () {
     cd $(git rev-parse --show-toplevel)
 }
