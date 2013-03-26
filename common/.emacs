@@ -87,7 +87,7 @@
             (setq web-mode-markup-indent-offset 4)
             (setq show-trailing-whitespace t)
             (local-set-key "\r" 'reindent-then-newline-and-indent)
-            (setq indent-tabs-mode t)))
+            (setq indent-tabs-mode nil)))
 
 ;; c mode settings
 (add-hook 'c-mode-hook
