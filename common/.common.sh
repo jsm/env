@@ -55,8 +55,7 @@ sshcs188 () {
     ssh -A cs188-my@$1
 }
 
-tc ()
-{
+tc () {
     b=$1;
     if git checkout $b; then
 	: true;
@@ -65,6 +64,13 @@ tc ()
 	git push origin $b;
 	git branch --set-upstream $b origin/$b;
     fi
+}
+
+gd () {
+    b=$1
+    git branch -r -d origin/$b
+    git branch -D $b
+    git push origin :$b
 }
 
 newrepo () {

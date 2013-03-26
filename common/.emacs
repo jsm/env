@@ -2,26 +2,46 @@
 (setq warning-minimum-level 'error)
 (setq warning-minimum-log-level 'error)
 
+;; Fix for ECB
+(setq stack-trace-on-error t)
+(setq ecb-tip-of-the-day nil)
+
 ;; Follow symlinks
 (setq vc-follow-symlinks t)
 
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/ecb/")
 (add-to-list 'load-path "~/.emacs.d/web-mode/")
+(add-to-list 'load-path "~/.emacs.d/rinari/")
+(add-to-list 'load-path "~/.emacs.d/rhtml")
 
 ;; load some files
+(require 'rinari) ;; Rinari
+(require 'ido) ;; Interactively Do Things (highly recommended, but not strictly required)
 (require 'rspec-mode)
 (require 'simple-wiki)
-(require 'ecb-autoloads)
+(require 'ecb)
 (require 'web-mode)
+(require 'rhtml-mode)
 (load "ws-trim")
 
-;; mode stuff
+(ido-mode t)
+
+;; Rinari Vars
+(setq
+ nxhtml-global-minor-mode t
+ mumamo-chunk-coloring 'submode-colored
+ nxhtml-skip-welcome t
+ indent-region-mode t
+ rng-nxml-auto-validate-flag nil
+ nxml-degraded t)
+
+;; mode loaders
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("[.]stub_data$" . javascript-mode))
@@ -75,11 +95,53 @@
             (setq show-trailing-whitespace t)
             (local-set-key "\r" 'reindent-then-newline-and-indent)
             (setq indent-tabs-mode nil)
+            (setq ruby-deep-indent-paren nil)
             (setq ruby-indent-tabs-mode nil)))
 ;;            (add-hook 'before-save-hook
 ;;                      (lambda () (if (not indent-tabs-mode)
 ;;                                     (untabify (point-min) (point-max)))))))
 (setq ruby-indent-level 4)
+
+(defadvice ruby-indent-line (after unindent-closing-paren activate)
+  (let ((column (current-column))
+        indent offset)
+    (save-excursion
+      (back-to-indentation)
+      (let ((state (syntax-ppss)))
+        (setq offset (- column (current-column)))
+        (when (and (eq (char-after) ?\))
+                   (not (zerop (car state))))
+          (goto-char (cadr state))
+          (setq indent (current-indentation)))))
+    (when indent
+      (indent-line-to indent)
+      (when (> offset 0) (forward-char offset)))))
+
+(defadvice ruby-indent-line (after line-up-args activate)
+  (let (indent prev-indent arg-indent)
+    (save-excursion
+      (back-to-indentation)
+      (when (zerop (car (syntax-ppss)))
+        (setq indent (current-column))
+        (skip-chars-backward " \t\n")
+        (when (eq ?, (char-before))
+          (ruby-backward-sexp)
+          (back-to-indentation)
+          (setq prev-indent (current-column))
+          (skip-syntax-forward "w_.")
+          (skip-chars-forward " ")
+          (setq arg-indent (current-column)))))
+    (when prev-indent
+      (let ((offset (- (current-column) indent)))
+        (cond ((< indent prev-indent)
+               (indent-line-to prev-indent))
+              ((= indent prev-indent)
+               (indent-line-to (+ prev-indent ruby-indent-level))))
+        (when (> offset 0) (forward-char offset))))))
+
+;; rhtml mode
+(add-hook 'rhtml-mode-hook
+          (lambda () (rinari-launch)))
 
 ;; web mode
 (add-hook 'web-mode-hook
@@ -202,3 +264,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+;; Start Everything I want to
+(ecb-activate)

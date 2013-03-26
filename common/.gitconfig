@@ -33,7 +33,7 @@
     rd = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git wc ^$RB $B
     m  = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git merge $RB
     sub = submodule
-    subup = !git submodule sync && git submodule update --init
+    subup = !git submodule sync && git submodule update --init --recursive
     remotes = remote -v show
     rev = rev-parse HEAD
     cl = clone --recursive

@@ -1,6 +1,9 @@
-[submodule "mmm-mode"]
-	path = mmm-mode
-	url = git@github.com:purcell/mmm-mode.git
 [submodule "web-mode"]
-	path = web-mode
+    path = common/.emacs.d/web-mode
 	url = git@github.com:fxbois/web-mode.git
+[submodule "rinari"]
+    path = common/.emacs.d/rinari
+	url = git://github.com/eschulte/rinari.git
+[submodule "rhtml"]
+    path = common/.emacs.d/rhtml
+	url = git@github.com:eschulte/rhtml.git
