@@ -1,19 +1,21 @@
 if [ $# -ne 1 ]
-   then
-   echo "Error in $0 - Invalid Argument Count"
-   echo "Syntax: $0 env_directory"
-   exit
+then
+    echo "Error in $0 - Invalid Argument Count"
+    echo "Syntax: $0 profile"
+    exit
 fi
 
-rm ~/.env
-rm ~/.bash_profile
-rm ~/.bashrc
-rm ~/.gitconfig
-rm ~/.emacs
-rm -rf ~/.emacs.d
-ln -s $1 ~/.env
-ln -s ~/.env/.bash_profile ~/.bash_profile
-ln -s ~/.env/.bashrc ~/.bashrc
-ln -s ~/.env/.gitconfig ~/.gitconfig
-ln -s ~/.env/.emacs ~/.emacs
-ln -s ~/.env/.emacs.d ~/.emacs.d
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT="$( cd "$( dirname "$DIR" )" && pwd )"
+
+ln -nsf $ROOT"/linux/"$1 ~/.env
+ln -sf ~/.env/.bash_profile ~/.bash_profile
+ln -sf ~/.env/.profile ~/.profile
+ln -sf ~/.env/.gitconfig ~/.gitconfig
+ln -sf ~/.env/.emacs ~/.emacs
+ln -nsf ~/.env/.emacs.d ~/.emacs.d
+
+cd $ROOT
+git submodule sync
+git submodule update --init --recursive
+
