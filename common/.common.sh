@@ -25,7 +25,7 @@ alias myenv="cd -P ~/.env"
 
 alias ch="choose"
 
-alias envup="(cdenv ; git pull)"
+alias envup="(cdenv ; git pull ; git subup)"
 alias envst="(cdenv ; git st)"
 
 alias prackup="CC_ENV=production rackup"
