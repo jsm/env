@@ -7,3 +7,6 @@
 [submodule "rhtml"]
     path = common/.emacs.d/rhtml
 	url = git@github.com:eschulte/rhtml.git
+[submodule "common/.emacs.d/ecb"]
+	path = common/.emacs.d/ecb
+	url = git@github.com:emacsmirror/ecb.git

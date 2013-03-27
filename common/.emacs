@@ -54,7 +54,7 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
+;;(setq indent-line-function 'insert-tab)
 
 ;; ws-trim settings
 (global-ws-trim-mode t)
@@ -160,7 +160,7 @@
 (add-hook 'html-mode-hook
           (lambda ()
             (setq sgml-basic-offset 4)
-            (setq indent-tabs-mode t)))
+            (setq indent-tabs-mode nil)))
 
 ;; xml-mode settings
 (add-hook 'nxml-mode-hook

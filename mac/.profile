@@ -1,6 +1,8 @@
 source ~/.env/.custom.sh
 source ~/.env/.common.sh
 
+export PROMPT_COMMAND='echo -ne "\\033]0;${PWD##*/}\\007"'
+
 alias ls="ls -pFh"
 
 function aquamacs2
