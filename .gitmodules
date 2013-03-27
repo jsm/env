@@ -10,3 +10,6 @@
 [submodule "ecb"]
 	path = common/.emacs.d/ecb
 	url = git@github.com:emacsmirror/ecb.git
+[submodule "php-mode"]
+	path = common/.emacs.d/php-mode
+	url = git@github.com:ejmr/php-mode.git

@@ -14,6 +14,7 @@
 (add-to-list 'load-path "~/.emacs.d/web-mode/")
 (add-to-list 'load-path "~/.emacs.d/rinari/")
 (add-to-list 'load-path "~/.emacs.d/rhtml")
+(add-to-list 'load-path "~/.emacs.d/php-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -23,6 +24,7 @@
 (require 'ecb)
 (require 'web-mode)
 (require 'rhtml-mode)
+(require 'php-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -51,6 +53,7 @@
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
