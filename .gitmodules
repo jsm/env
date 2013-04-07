@@ -13,3 +13,6 @@
 [submodule "php-mode"]
 	path = common/.emacs.d/php-mode
 	url = git@github.com:ejmr/php-mode.git
+[submodule "haml-mode"]
+	path = common/.emacs.d/haml-mode
+	url = git@github.com:nex3/haml-mode.git

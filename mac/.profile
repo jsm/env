@@ -15,14 +15,25 @@ function aquamacs2
      open -a /Applications/Aquamacs2.app/ "$@"
  }
 
+function aquamacs3
+ {
+     for f in "$@"
+     do
+         test -e $f || touch $f
+     done
+     open -a /Applications/Aquamacs3.app/ "$@"
+ }
+
+
+
 alias amacs="aquamacs"
 alias amacs2="aquamacs2"
 alias aamacs2="aquamacs2"
 alias a="aquamacs"
 alias a2="aquamacs2"
+alias a3="aquamacs3"
 alias aa="aquamacs2"
 
-alias mysql=mysql5
 alias mysqldump=mysqldump5
 
 choose () {
