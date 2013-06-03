@@ -115,3 +115,5 @@
     history-view-vpane-position = 801
     file-view-vpane-position = 851
 
+[pull]
+    rebase = true

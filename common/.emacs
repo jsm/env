@@ -16,6 +16,7 @@
 (add-to-list 'load-path "~/.emacs.d/rhtml")
 (add-to-list 'load-path "~/.emacs.d/php-mode")
 (add-to-list 'load-path "~/.emacs.d/haml-mode")
+(add-to-list 'load-path "~/.emacs.d/coffee-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -27,6 +28,8 @@
 (require 'rhtml-mode)
 (require 'php-mode)
 (require 'haml-mode)
+(require 'coffee-mode)
+(require 'sass-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -57,6 +60,10 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
+(add-to-list 'auto-mode-alist '("\\.coffee\\'" . coffee-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+(add-to-list 'auto-mode-alist '("\\.sass\\'" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -145,6 +152,10 @@
                (indent-line-to (+ prev-indent ruby-indent-level))))
         (when (> offset 0) (forward-char offset))))))
 
+;; python mode
+(add-hook 'python-mode-hook
+          (lambda () (semantic-mode)))
+
 ;; rhtml mode
 (add-hook 'rhtml-mode-hook
           (lambda () (rinari-launch)))
@@ -172,6 +183,11 @@
 (add-hook 'nxml-mode-hook
           (lambda ()
             (setq nxml-child-indent 4)))
+
+;; coffee-mode settings
+(add-hook 'coffee-mode-hook
+          (lambda ()
+            (setq tab-width 2)))
 
 ;; whitespace settings
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
@@ -212,7 +228,7 @@
 (add-to-list 'default-frame-alist '(alpha . (80 70)))
 ;; aquamacs switch to white on black
 (require 'color-theme)
-(color-theme-tty-dark)
+(color-theme-clarity)
 
 (defface extra-whitespace-face
   '((t (:background "pale green")))
@@ -253,6 +269,10 @@
   "Indent the region, or otherwise the current line, by -4 spaces."
   (interactive)
   (indent-rigidly-n -4))
+(defun outdent-rigidly-2 ()
+  "Indent the region, or otherwise the current line, by -2 spaces."
+  (interactive)
+  (indent-rigidly-n -2))
 (global-set-key (kbd "M-<tab>") 'indent-rigidly-4)
 (global-set-key (kbd "C-M-<tab>") 'outdent-rigidly-4)
 

@@ -14,6 +14,7 @@ ln -sf ~/.env/.bash_profile ~/.bash_profile
 ln -sf ~/.env/.profile ~/.profile
 ln -sf ~/.env/.gitconfig ~/.gitconfig
 ln -sf ~/.env/.emacs ~/.emacs
+ln -sf ~/.env/.pryrc ~/.pryrc
 ln -nsf ~/.env/.emacs.d ~/.emacs.d
 
 cd $ROOT

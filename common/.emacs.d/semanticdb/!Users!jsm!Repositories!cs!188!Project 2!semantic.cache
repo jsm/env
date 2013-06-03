@@ -1,0 +1,496 @@
+;; Object Project 2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Project 2/"
+  :tables (list 
+   (semanticdb-table "game.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("util" include nil nil [913 931])
+            ("time" include nil nil [932 947])
+            ("os" include nil nil [932 947])
+            ("traceback" include nil nil [948 964])
+            ("sys" include nil nil [965 975])
+            ("Agent" type
+               (:documentation "
+    An agent must define a getAction method, but may also define the
+    following methods which will be called if they exist:
+
+    def registerInitialState(self, state): # inspects the starting state
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1321 1339]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1297 1301])
+                            ("index" variable nil (reparse-symbol function_parameters) [1303 1308]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1284 1340])
+                    ("getAction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1359 1363])
+                            ("state" variable nil (reparse-symbol function_parameters) [1365 1370]))                          
+                        :documentation "
+        The Agent will receive a GameState (from either {pacman, capture, sonar}.py) and
+        must return an action from Directions.{North, South, East, West, Stop}
+        ")
+                        (reparse-symbol indented_block_body) [1345 1591]))                  
+                :type "class")
+                nil [1050 1591])
+            ("Directions" type
+               (:members 
+                  ( ("NORTH" variable nil (reparse-symbol indented_block_body) [1614 1629])
+                    ("SOUTH" variable nil (reparse-symbol indented_block_body) [1634 1649])
+                    ("EAST" variable nil (reparse-symbol indented_block_body) [1654 1667])
+                    ("WEST" variable nil (reparse-symbol indented_block_body) [1672 1685])
+                    ("STOP" variable nil (reparse-symbol indented_block_body) [1690 1703])
+                    ("LEFT" variable nil (reparse-symbol indented_block_body) [1709 1865])
+                    ("RIGHT" variable nil (reparse-symbol indented_block_body) [1871 1922])
+                    ("REVERSE" variable nil (reparse-symbol indented_block_body) [1928 2062]))                  
+                :type "class")
+                nil [1592 2063])
+            ("Configuration" type
+               (:documentation "
+    A Configuration holds the (x,y) coordinate of a character, along with its
+    traveling direction.
+
+    The convention for positions, like a graph, is that (0,0) is the lower left corner, x increases
+    horizontally and y increases vertically.  Therefore, north is the direction of increasing y, or (0,1).
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2461 2475])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2484 2510]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2430 2434])
+                            ("pos" variable nil (reparse-symbol function_parameters) [2436 2439])
+                            ("direction" variable nil (reparse-symbol function_parameters) [2441 2450]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2417 2511])
+                    ("getPosition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2532 2536]))                          )
+                        (reparse-symbol indented_block_body) [2516 2565])
+                    ("getDirection" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2587 2591]))                          )
+                        (reparse-symbol indented_block_body) [2570 2624])
+                    ("isInteger" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2643 2647]))                          )
+                        (reparse-symbol indented_block_body) [2629 2716])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2732 2736])
+                            ("other" variable nil (reparse-symbol function_parameters) [2738 2743]))                          )
+                        (reparse-symbol indented_block_body) [2721 2862])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2880 2884]))                          )
+                        (reparse-symbol indented_block_body) [2867 2979])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2996 3000]))                          )
+                        (reparse-symbol indented_block_body) [2984 3066])
+                    ("generateSuccessor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3093 3097])
+                            ("vector" variable nil (reparse-symbol function_parameters) [3099 3105]))                          
+                        :documentation "
+        Generates a new configuration reached by translating the current
+        configuration by the action vector.  This is a low-level call and does
+        not attempt to respect the legality of the movement.
+
+        Actions are movement vectors.
+        ")
+                        (reparse-symbol indented_block_body) [3071 3650]))                  
+                :type "class")
+                nil [2064 3650])
+            ("AgentState" type
+               (:documentation "
+    AgentStates hold the state of an agent (configuration, speed, scared, etc).
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3830 3861])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3870 3909])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3918 3942])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3951 3971])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3980 4000]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3784 3788])
+                            ("startConfiguration" variable nil (reparse-symbol function_parameters) [3790 3808])
+                            ("isPacman" variable nil (reparse-symbol function_parameters) [3810 3818]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3770 4001])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4019 4023]))                          )
+                        (reparse-symbol indented_block_body) [4006 4182])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4199 4203])
+                            ("other" variable nil (reparse-symbol function_parameters) [4205 4210]))                          )
+                        (reparse-symbol indented_block_body) [4187 4364])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4382 4386]))                          )
+                        (reparse-symbol indented_block_body) [4369 4465])
+                    ("copy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4480 4484]))                          )
+                        (reparse-symbol indented_block_body) [4470 4704])
+                    ("getPosition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4725 4729]))                          )
+                        (reparse-symbol indented_block_body) [4709 4831])
+                    ("getDirection" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4853 4857]))                          )
+                        (reparse-symbol indented_block_body) [4836 4909]))                  
+                :type "class")
+                nil [3651 4909])
+            ("Grid" type
+               (:documentation "
+    A 2-dimensional array of objects backed by a list of lists.  Data is accessed
+    via grid[x][y] where (x,y) are positions on a Pacman map with x horizontal,
+    y vertical and the origin (0,0) in the bottom left corner.
+
+    The __str__ method constructs an output that is oriented like a pacman board.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [5337 5426])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5434 5457])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5467 5485])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5494 5514])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5523 5596])
+                            ("if" code nil (reparse-symbol indented_block_body) [5605 5675]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5263 5267])
+                            ("width" variable nil (reparse-symbol function_parameters) [5269 5274])
+                            ("height" variable nil (reparse-symbol function_parameters) [5276 5282])
+                            ("initialValue" variable nil (reparse-symbol function_parameters) [5284 5296])
+                            ("bitRepresentation" variable nil (reparse-symbol function_parameters) [5304 5321]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5250 5675])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5696 5700])
+                            ("i" variable nil (reparse-symbol function_parameters) [5702 5703]))                          )
+                        (reparse-symbol indented_block_body) [5680 5734])
+                    ("__setitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5755 5759])
+                            ("key" variable nil (reparse-symbol function_parameters) [5761 5764])
+                            ("item" variable nil (reparse-symbol function_parameters) [5766 5770]))                          )
+                        (reparse-symbol indented_block_body) [5739 5803])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5820 5824]))                          )
+                        (reparse-symbol indented_block_body) [5808 5998])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6014 6018])
+                            ("other" variable nil (reparse-symbol function_parameters) [6020 6025]))                          )
+                        (reparse-symbol indented_block_body) [6003 6106])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6124 6128]))                          )
+                        (reparse-symbol indented_block_body) [6111 6348])
+                    ("copy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6362 6366]))                          )
+                        (reparse-symbol indented_block_body) [6353 6471])
+                    ("deepCopy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6489 6493]))                          )
+                        (reparse-symbol indented_block_body) [6476 6523])
+                    ("shallowCopy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6544 6548]))                          )
+                        (reparse-symbol indented_block_body) [6528 6637])
+                    ("count" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6652 6656])
+                            ("item" variable nil (reparse-symbol function_parameters) [6658 6662]))                          )
+                        (reparse-symbol indented_block_body) [6642 6727])
+                    ("asList" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6743 6747])
+                            ("key" variable nil (reparse-symbol function_parameters) [6749 6752]))                          )
+                        (reparse-symbol indented_block_body) [6732 6936])
+                    ("packBits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6954 6958]))                          
+                        :documentation "
+        Returns an efficient int list representation
+
+        (width, height, bitPackedInts...)
+        ")
+                        (reparse-symbol indented_block_body) [6941 7557])
+                    ("_cellIndexToPosition" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7587 7591])
+                            ("index" variable nil (reparse-symbol function_parameters) [7593 7598]))                          )
+                        (reparse-symbol indented_block_body) [7562 7685])
+                    ("_unpackBits" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7706 7710])
+                            ("bits" variable nil (reparse-symbol function_parameters) [7712 7716]))                          
+                        :documentation "
+        Fills in data from a bit-level representation
+        ")
+                        (reparse-symbol indented_block_body) [7690 8083])
+                    ("_unpackInt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8103 8107])
+                            ("packed" variable nil (reparse-symbol function_parameters) [8109 8115])
+                            ("size" variable nil (reparse-symbol function_parameters) [8117 8121]))                          )
+                        (reparse-symbol indented_block_body) [8088 8459]))                  
+                :type "class")
+                nil [4910 8459])
+            ("reconstituteGrid" function (:arguments 
+              ( ("bitRep" variable nil (reparse-symbol function_parameters) [8481 8487]))              ) nil [8460 8645])
+            ("Actions" type
+               (:documentation "
+    A collection of static methods for manipulating move actions.
+    "
+                :members 
+                  ( ("_directions" variable nil (reparse-symbol indented_block_body) [8876 9098])
+                    ("_directionsAsList" variable nil (reparse-symbol indented_block_body) [9104 9143])
+                    ("TOLERANCE" variable nil (reparse-symbol indented_block_body) [9149 9165])
+                    ("reverseDirection" function (:arguments 
+                      ( ("action" variable nil (reparse-symbol function_parameters) [9192 9198]))                      ) (reparse-symbol indented_block_body) [9171 9519])
+                    ("reverseDirection" variable nil (reparse-symbol indented_block_body) [9523 9572])
+                    ("vectorToDirection" function (:arguments 
+                      ( ("vector" variable nil (reparse-symbol function_parameters) [9600 9606]))                      ) (reparse-symbol indented_block_body) [9578 9882])
+                    ("vectorToDirection" variable nil (reparse-symbol indented_block_body) [9886 9937])
+                    ("directionToVector" function (:arguments 
+                      ( ("direction" variable nil (reparse-symbol function_parameters) [9965 9974])
+                        ("speed" variable nil (reparse-symbol function_parameters) [9976 9981]))                      ) (reparse-symbol indented_block_body) [9943 10079])
+                    ("directionToVector" variable nil (reparse-symbol indented_block_body) [10083 10134])
+                    ("getPossibleActions" function (:arguments 
+                      ( ("config" variable nil (reparse-symbol function_parameters) [10163 10169])
+                        ("walls" variable nil (reparse-symbol function_parameters) [10171 10176]))                      ) (reparse-symbol indented_block_body) [10140 10685])
+                    ("getPossibleActions" variable nil (reparse-symbol indented_block_body) [10690 10743])
+                    ("getLegalNeighbors" function (:arguments 
+                      ( ("position" variable nil (reparse-symbol function_parameters) [10771 10779])
+                        ("walls" variable nil (reparse-symbol function_parameters) [10781 10786]))                      ) (reparse-symbol indented_block_body) [10749 11250])
+                    ("getLegalNeighbors" variable nil (reparse-symbol indented_block_body) [11254 11305])
+                    ("getSuccessor" function (:arguments 
+                      ( ("position" variable nil (reparse-symbol function_parameters) [11328 11336])
+                        ("action" variable nil (reparse-symbol function_parameters) [11338 11344]))                      ) (reparse-symbol indented_block_body) [11311 11454])
+                    ("getSuccessor" variable nil (reparse-symbol indented_block_body) [11458 11499]))                  
+                :type "class")
+                nil [8758 11500])
+            ("GameStateData" type
+               (:documentation "
+
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Generates a new data packet by copying information from its predecessor.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [11591 11687])
+                            ("if" code nil (reparse-symbol indented_block_body) [11696 12025])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12034 12056])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12065 12087])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12096 12121])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12130 12153])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12162 12180])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12189 12206])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12215 12235]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11557 11561])
+                            ("prevState" variable nil (reparse-symbol function_parameters) [11563 11572]))                          
+                        :documentation "
+        Generates a new data packet by copying information from its predecessor.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [11543 12236])
+                    ("deepCopy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12255 12259]))                          )
+                        (reparse-symbol indented_block_body) [12241 12590])
+                    ("copyAgentStates" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12616 12620])
+                            ("agentStates" variable nil (reparse-symbol function_parameters) [12622 12633]))                          )
+                        (reparse-symbol indented_block_body) [12595 12783])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12800 12804])
+                            ("other" variable nil (reparse-symbol function_parameters) [12806 12811]))                          
+                        :documentation "
+        Allows two states to be compared.
+        ")
+                        (reparse-symbol indented_block_body) [12788 13215])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13234 13238]))                          
+                        :documentation "
+        Allows states to be keys of dictionaries.
+        ")
+                        (reparse-symbol indented_block_body) [13220 13648])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13666 13670]))                          )
+                        (reparse-symbol indented_block_body) [13653 14637])
+                    ("_foodWallStr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14660 14664])
+                            ("hasFood" variable nil (reparse-symbol function_parameters) [14666 14673])
+                            ("hasWall" variable nil (reparse-symbol function_parameters) [14675 14682]))                          )
+                        (reparse-symbol indented_block_body) [14642 14811])
+                    ("_pacStr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14829 14833])
+                            ("dir" variable nil (reparse-symbol function_parameters) [14835 14838]))                          )
+                        (reparse-symbol indented_block_body) [14816 15037])
+                    ("_ghostStr" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15057 15061])
+                            ("dir" variable nil (reparse-symbol function_parameters) [15063 15066]))                          )
+                        (reparse-symbol indented_block_body) [15042 15284])
+                    ("initialize" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15305 15309])
+                            ("layout" variable nil (reparse-symbol function_parameters) [15311 15317])
+                            ("numGhostAgents" variable nil (reparse-symbol function_parameters) [15319 15333]))                          
+                        :documentation "
+        Creates an initial game state from a layout array (see layout.py).
+        ")
+                        (reparse-symbol indented_block_body) [15289 16011]))                  
+                :type "class")
+                nil [11501 16011])
+            ("try" code nil nil [16012 16095])
+            ("Game" type
+               (:documentation "
+    The Game manages the control flow, soliciting actions from agents.
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [16312 16337])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16346 16366])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16375 16397])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16406 16424])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16433 16467])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16476 16497])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16506 16534])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16543 16581])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16590 16611])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16620 16666])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16675 16728])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16737 16762])
+                            ("cStringIO" include nil (reparse-symbol indented_block_body) [16771 16787])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16796 16857]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16214 16218])
+                            ("agents" variable nil (reparse-symbol function_parameters) [16220 16226])
+                            ("display" variable nil (reparse-symbol function_parameters) [16228 16235])
+                            ("rules" variable nil (reparse-symbol function_parameters) [16237 16242])
+                            ("startingIndex" variable nil (reparse-symbol function_parameters) [16244 16257])
+                            ("muteAgents" variable nil (reparse-symbol function_parameters) [16261 16271])
+                            ("catchExceptions" variable nil (reparse-symbol function_parameters) [16279 16294]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [16200 16858])
+                    ("getProgress" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16879 16883]))                          )
+                        (reparse-symbol indented_block_body) [16863 16997])
+                    ("_agentCrash" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17019 17023])
+                            ("agentIndex" variable nil (reparse-symbol function_parameters) [17025 17035])
+                            ("quiet" variable nil (reparse-symbol function_parameters) [17037 17042]))                          )
+                        (reparse-symbol indented_block_body) [17002 17256])
+                    ("OLD_STDOUT" variable nil (reparse-symbol indented_block_body) [17261 17278])
+                    ("OLD_STDERR" variable nil (reparse-symbol indented_block_body) [17283 17300])
+                    ("mute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17315 17319])
+                            ("agentIndex" variable nil (reparse-symbol function_parameters) [17321 17331]))                          )
+                        (reparse-symbol indented_block_body) [17306 17600])
+                    ("unmute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17616 17620]))                          )
+                        (reparse-symbol indented_block_body) [17605 17808])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17823 17827]))                          
+                        :documentation "
+        Main control loop for game play.
+        ")
+                        (reparse-symbol indented_block_body) [17814 25278]))                  
+                :type "class")
+                nil [16096 25278]))          
+    :file "game.py"
+    :pointmax 25278
+    :fsize 25277
+    :lastmodtime '(20773 58400 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "util.py"
+    :file "util.py"
+    :fsize 25602
+    :lastmodtime '(20773 58400 0 0)
+    )
+   )
+  :file "!Users!jsm!Repositories!cs!188!Project 2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

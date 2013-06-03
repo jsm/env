@@ -7,6 +7,7 @@ alias sudo="sudo "
 alias jserv="ssh -p 6464 -A jsm@sanmiguel.je"
 alias sshbare="ssh -p 6464 -A jsm@108.166.120.88"
 alias sshocf="ssh ssh.ocf.berkeley.edu"
+alias sshgrades="ssh 54.245.41.207"
 
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"
@@ -95,7 +96,7 @@ setuphome () {
 }
 
 setupgrading () {
-    rvm use 1.9.3@grading --default
+    rvm use 2.0.0@grading --default
 }
 
 setupbare () {

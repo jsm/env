@@ -1,0 +1,639 @@
+;; Object Project 1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Project 1/"
+  :tables (list 
+   (semanticdb-table "pacman.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "pacman.py"
+    :pointmax 26081
+    :fsize 26080
+    :lastmodtime '(20743 34394 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "searchAgents.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("\"\"\"
+This file contains all of the agents that can be selected to
+control Pacman.  To select an agent, use the '-p' option
+when running pacman.py.  Arguments can be passed to your agent
+using '-a'.  For example, to load a SearchAgent that uses
+depth first search (dfs), run the following command:
+
+> python pacman.py -p SearchAgent -a fn=depthFirstSearch
+
+Commands to invoke other search strategies can be found in the
+project description.
+
+Please only change the parts of the file you are asked to.
+Look for the lines that say
+
+\"*** YOUR CODE HERE ***\"
+
+The parts you fill in start about 3/4 of the way down.  Follow the
+project description for details.
+
+Good luck and happy searching!
+\"\"\"" code nil nil [524 1213])
+            ("game" include nil nil [1214 1241])
+            ("game" include nil nil [1242 1264])
+            ("game" include nil nil [1265 1289])
+            ("util" include nil nil [1290 1301])
+            ("time" include nil nil [1302 1313])
+            ("search" include nil nil [1314 1327])
+            ("GoWestAgent" type
+               (:superclasses ("Agent")
+                :members 
+                  ( ("\"An agent that goes West until it can't.\"" code nil (reparse-symbol indented_block_body) [1359 1400])
+                    ("getAction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1420 1424])
+                            ("state" variable nil (reparse-symbol function_parameters) [1426 1431]))                          )
+                        (reparse-symbol indented_block_body) [1406 1644]))                  
+                :type "class")
+                nil [1329 1644])
+            ("SearchAgent" type
+               (:documentation "
+    This very general search agent finds a path using a supplied search algorithm for a
+    supplied search problem, then returns actions to follow that path.
+
+    As a default, this agent runs DFS on a PositionSearchProblem to find location (1,1)
+
+    Options for fn include:
+      depthFirstSearch or dfs
+      breadthFirstSearch or bfs
+
+
+    Note: You should NOT change any code in SearchAgent
+    "
+                :superclasses ("Agent")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [2590 2697])
+                            ("func" variable nil (reparse-symbol indented_block_body) [2705 2731])
+                            ("if" code nil (reparse-symbol indented_block_body) [2740 3456])
+                            ("if" code nil (reparse-symbol indented_block_body) [3517 3675])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3683 3716])
+                            ("print" code nil (reparse-symbol indented_block_body) [3725 3774]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2327 2331])
+                            ("fn" variable nil (reparse-symbol function_parameters) [2333 2335])
+                            ("prob" variable nil (reparse-symbol function_parameters) [2356 2360])
+                            ("heuristic" variable nil (reparse-symbol function_parameters) [2386 2395]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2314 3775])
+                    ("registerInitialState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3805 3809])
+                            ("state" variable nil (reparse-symbol function_parameters) [3811 3816]))                          
+                        :documentation "
+        This is the first time that the agent sees the layout of the game board. Here, we
+        choose a path to the goal.  In this phase, the agent should compute the path to the
+        goal and store it in a local variable.  All of the work is done in this method!
+
+        state: a GameState object (pacman.py)
+        ")
+                        (reparse-symbol indented_block_body) [3780 4691])
+                    ("getAction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4710 4714])
+                            ("state" variable nil (reparse-symbol function_parameters) [4716 4721]))                          
+                        :documentation "
+        Returns the next action in the path chosen earlier (in registerInitialState).  Return
+        Directions.STOP if there is no further action to take.
+
+        state: a GameState object (pacman.py)
+        ")
+                        (reparse-symbol indented_block_body) [4696 5193]))                  
+                :type "class")
+                nil [1870 5193])
+            ("PositionSearchProblem" type
+               (:documentation "
+    A search problem defines the state space, start state, goal test,
+    successor function and cost function.  This search problem can be
+    used to find paths to a particular point on the pacman board.
+
+    The state space consists of (x,y) positions in a pacman game.
+
+    Note: this search problem is fully specified; you should NOT change it.
+    "
+                :superclasses ("search.SearchProblem")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Stores the start and goal.
+
+        gameState: A GameState object (pacman.py)
+        costFn: A function from a search state (tuple) to a non-negative number
+        goal: A position in the gameState
+        \"\"\"" code nil (reparse-symbol indented_block_body) [5712 5935])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5944 5977])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5986 6033])
+                            ("if" code nil (reparse-symbol indented_block_body) [6042 6084])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6092 6108])
+                            ("self" variable nil (reparse-symbol indented_block_body) [6117 6137])
+                            ("if" code nil (reparse-symbol indented_block_body) [6146 6296])
+                            ("self, self, self" code nil (reparse-symbol indented_block_body) [6336 6396]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5629 5633])
+                            ("gameState" variable nil (reparse-symbol function_parameters) [5635 5644])
+                            ("costFn" variable nil (reparse-symbol function_parameters) [5646 5652])
+                            ("goal" variable nil (reparse-symbol function_parameters) [5668 5672])
+                            ("start" variable nil (reparse-symbol function_parameters) [5680 5685])
+                            ("warn" variable nil (reparse-symbol function_parameters) [5692 5696]))                          
+                        :documentation "
+        Stores the start and goal.
+
+        gameState: A GameState object (pacman.py)
+        costFn: A function from a search state (tuple) to a non-negative number
+        goal: A position in the gameState
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [5616 6397])
+                    ("getStartState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6420 6424]))                          )
+                        (reparse-symbol indented_block_body) [6402 6458])
+                    ("isGoalState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6479 6483])
+                            ("state" variable nil (reparse-symbol function_parameters) [6485 6490]))                          )
+                        (reparse-symbol indented_block_body) [6463 6905])
+                    ("getSuccessors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6928 6932])
+                            ("state" variable nil (reparse-symbol function_parameters) [6934 6939]))                          
+                        :documentation "
+        Returns successor states, the actions they require, and a cost of 1.
+
+         As noted in search.py:
+             For a given state, this should return a list of triples,
+         (successor, action, stepCost), where 'successor' is a
+         successor to the current state, 'action' is the action
+         required to get there, and 'stepCost' is the incremental
+         cost of expanding to that successor
+        ")
+                        (reparse-symbol indented_block_body) [6910 8054])
+                    ("getCostOfActions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8080 8084])
+                            ("actions" variable nil (reparse-symbol function_parameters) [8086 8093]))                          
+                        :documentation "
+        Returns the cost of a particular sequence of actions.  If those actions
+        include an illegal move, return 999999
+        ")
+                        (reparse-symbol indented_block_body) [8059 8649]))                  
+                :type "class")
+                nil [5194 8649])
+            ("StayEastSearchAgent" type
+               (:documentation "
+    An agent for position search with a cost function that penalizes being in
+    positions on the West side of the board.
+
+    The cost function for stepping into a position (x,y) is 1/2^x.
+    "
+                :superclasses ("SearchAgent")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [8929 8975])
+                            ("costFn" variable nil (reparse-symbol indented_block_body) [8984 9017])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9026 9094]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8914 8918]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8901 9095]))                  
+                :type "class")
+                nil [8650 9095])
+            ("StayWestSearchAgent" type
+               (:documentation "
+    An agent for position search with a cost function that penalizes being in
+    positions on the East side of the board.
+
+    The cost function for stepping into a position (x,y) is 2^x.
+    "
+                :superclasses ("SearchAgent")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9373 9419])
+                            ("costFn" variable nil (reparse-symbol indented_block_body) [9428 9460])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9469 9537]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9358 9362]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9345 9538]))                  
+                :type "class")
+                nil [9096 9538])
+            ("manhattanHeuristic" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [9562 9570])
+                ("problem" variable nil (reparse-symbol function_parameters) [9572 9579])
+                ("info" variable nil (reparse-symbol function_parameters) [9581 9585]))              ) nil [9539 9755])
+            ("euclideanHeuristic" function (:arguments 
+              ( ("position" variable nil (reparse-symbol function_parameters) [9779 9787])
+                ("problem" variable nil (reparse-symbol function_parameters) [9789 9796])
+                ("info" variable nil (reparse-symbol function_parameters) [9798 9802]))              ) nil [9756 9987])
+            ("CornersProblem" type
+               (:documentation "
+    This search problem finds paths through all four corners of a layout.
+
+    You must select a suitable state space and successor function
+    "
+                :superclasses ("search.SearchProblem")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+        Stores the walls, pacman's starting position and corners.
+        \"\"\"" code nil (reparse-symbol indented_block_body) [10404 10485])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10494 10535])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10544 10605])
+                            ("top, right" code nil (reparse-symbol indented_block_body) [10614 10666])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10675 10732])
+                            ("for" code nil (reparse-symbol indented_block_body) [10741 10890])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10898 10916]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10370 10374])
+                            ("startingGameState" variable nil (reparse-symbol function_parameters) [10376 10393]))                          
+                        :documentation "
+        Stores the walls, pacman's starting position and corners.
+        "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10357 10951])
+                    ("getStartState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10975 10979]))                          )
+                        (reparse-symbol indented_block_body) [10957 11137])
+                    ("isGoalState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11158 11162])
+                            ("state" variable nil (reparse-symbol function_parameters) [11164 11169]))                          )
+                        (reparse-symbol indented_block_body) [11142 11360])
+                    ("getSuccessors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11383 11387])
+                            ("state" variable nil (reparse-symbol function_parameters) [11389 11394]))                          
+                        :documentation "
+        Returns successor states, the actions they require, and a cost of 1.
+
+         As noted in search.py:
+             For a given state, this should return a list of triples,
+         (successor, action, stepCost), where 'successor' is a
+         successor to the current state, 'action' is the action
+         required to get there, and 'stepCost' is the incremental
+         cost of expanding to that successor
+        ")
+                        (reparse-symbol indented_block_body) [11365 12914])
+                    ("getCostOfActions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12940 12944])
+                            ("actions" variable nil (reparse-symbol function_parameters) [12946 12953]))                          
+                        :documentation "
+        Returns the cost of a particular sequence of actions.  If those actions
+        include an illegal move, return 999999.  This is implemented for you.
+        ")
+                        (reparse-symbol indented_block_body) [12919 13420]))                  
+                :type "class")
+                nil [10151 13420])
+            ("cornersHeuristic" function
+               (:documentation "
+    A heuristic for the CornersProblem that you defined.
+
+      state:   The current search state
+               (a data structure you chose in your search problem)
+
+      problem: The CornersProblem instance for this layout.
+
+    This function should always return a number that is a lower bound
+    on the shortest path from the state to a goal of the problem; i.e.
+    it should be admissible (as well as consistent).
+    "
+                :arguments 
+                  ( ("state" variable nil (reparse-symbol function_parameters) [13443 13448])
+                    ("problem" variable nil (reparse-symbol function_parameters) [13450 13457]))                  )
+                nil [13422 15134])
+            ("AStarCornersAgent" type
+               (:superclasses ("SearchAgent")
+                :members 
+                  ( ("\"A SearchAgent for FoodSearchProblem using A* and your foodHeuristic\"" code nil (reparse-symbol indented_block_body) [15177 15246])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [15279 15356])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15365 15397]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15264 15268]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15251 15398]))                  
+                :type "class")
+                nil [15135 15398])
+            ("FoodSearchProblem" type
+               (:documentation "
+    A search problem associated with finding the a path that collects all of the
+    food (dots) in a Pacman game.
+
+    A search state in this problem is a tuple ( pacmanPosition, foodGrid ) where
+      pacmanPosition: a tuple (x,y) of integers specifying Pacman's position
+      foodGrid:       a Grid (see game.py) of either True or False, specifying remaining food
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [15859 15940])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15949 15990])
+                            ("self" variable nil (reparse-symbol indented_block_body) [15999 16041])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16050 16068])
+                            ("self" variable nil (reparse-symbol indented_block_body) [16077 16100]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15825 15829])
+                            ("startingGameState" variable nil (reparse-symbol function_parameters) [15831 15848]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [15812 16155])
+                    ("getStartState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16178 16182]))                          )
+                        (reparse-symbol indented_block_body) [16160 16211])
+                    ("isGoalState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16232 16236])
+                            ("state" variable nil (reparse-symbol function_parameters) [16238 16243]))                          )
+                        (reparse-symbol indented_block_body) [16216 16283])
+                    ("getSuccessors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16306 16310])
+                            ("state" variable nil (reparse-symbol function_parameters) [16312 16317]))                          )
+                        (reparse-symbol indented_block_body) [16288 16927])
+                    ("getCostOfActions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16953 16957])
+                            ("actions" variable nil (reparse-symbol function_parameters) [16959 16966]))                          
+                        :documentation "Returns the cost of a particular sequence of actions.  If those actions
+        include an illegal move, return 999999")
+                        (reparse-symbol indented_block_body) [16932 17458]))                  
+                :type "class")
+                nil [15399 17458])
+            ("AStarFoodSearchAgent" type
+               (:superclasses ("SearchAgent")
+                :members 
+                  ( ("\"A SearchAgent for FoodSearchProblem using A* and your foodHeuristic\"" code nil (reparse-symbol indented_block_body) [17504 17573])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [17606 17680])
+                            ("self" variable nil (reparse-symbol indented_block_body) [17689 17724]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17591 17595]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [17578 17725]))                  
+                :type "class")
+                nil [17459 17725])
+            ("foodHeuristic" function
+               (:documentation "
+    Your heuristic for the FoodSearchProblem goes here.
+
+    This heuristic must be consistent to ensure correctness.  First, try to come up
+    with an admissible heuristic; almost all admissible heuristics will be consistent
+    as well.
+
+    If using A* ever finds a solution that is worse uniform cost search finds,
+    your heuristic is *not* consistent, and probably not admissible!  On the other hand,
+    inadmissible or inconsistent heuristics may find optimal solutions, so be careful.
+
+    The state is a tuple ( pacmanPosition, foodGrid ) where foodGrid is a
+    Grid (see game.py) of either True or False. You can call foodGrid.asList()
+    to get a list of food coordinates instead.
+
+    If you want access to info like walls, capsules, etc., you can query the problem.
+    For example, problem.walls gives you a Grid of where the walls are.
+
+    If you want to *store* information to be reused in other calls to the heuristic,
+    there is a dictionary called problem.heuristicInfo that you can use. For example,
+    if you only want to count the walls once and store that value, try:
+      problem.heuristicInfo['wallCount'] = problem.walls.count()
+    Subsequent calls to this heuristic can access problem.heuristicInfo['wallCount']
+    "
+                :arguments 
+                  ( ("state" variable nil (reparse-symbol function_parameters) [17744 17749])
+                    ("problem" variable nil (reparse-symbol function_parameters) [17751 17758]))                  )
+                nil [17726 21530])
+            ("ClosestDotSearchAgent" type
+               (:superclasses ("SearchAgent")
+                :members 
+                  ( ("\"Search for all food using a sequence of searches\"" code nil (reparse-symbol indented_block_body) [21577 21627])
+                    ("registerInitialState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21657 21661])
+                            ("state" variable nil (reparse-symbol function_parameters) [21663 21668]))                          )
+                        (reparse-symbol indented_block_body) [21632 22367])
+                    ("findPathToClosestDot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22397 22401])
+                            ("gameState" variable nil (reparse-symbol function_parameters) [22403 22412]))                          )
+                        (reparse-symbol indented_block_body) [22372 23309]))                  
+                :type "class")
+                nil [21531 23309])
+            ("AnyFoodSearchProblem" type
+               (:documentation "
+      A search problem for finding a path to any food.
+
+      This search problem is just like the PositionSearchProblem, but
+      has a different goal test, which you need to fill in below.  The
+      state space and successor function do not need to be changed.
+
+      The class definition above, AnyFoodSearchProblem(PositionSearchProblem),
+      inherits the methods of the PositionSearchProblem.
+
+      You can use this search problem to help you fill in
+      the findPathToClosestDot method.
+    "
+                :superclasses ("PositionSearchProblem")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"Stores information from the gameState.  You don't need to change this.\"" code nil (reparse-symbol indented_block_body) [23921 23993])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24047 24078])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24164 24197])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24206 24253])
+                            ("self" variable nil (reparse-symbol indented_block_body) [24262 24287])
+                            ("self, self, self" code nil (reparse-symbol indented_block_body) [24296 24356]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23895 23899])
+                            ("gameState" variable nil (reparse-symbol function_parameters) [23901 23910]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [23882 24357])
+                    ("isGoalState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24378 24382])
+                            ("state" variable nil (reparse-symbol function_parameters) [24384 24389]))                          
+                        :documentation "
+        The state is Pacman's position. Fill this in with a goal test
+        that will complete the problem definition.
+        ")
+                        (reparse-symbol indented_block_body) [24362 24589]))                  
+                :type "class")
+                nil [23310 24589])
+            ("ApproximateSearchAgent" type
+               (:superclasses ("Agent")
+                :members 
+                  ( ("\"Implement your contest entry here.  Change anything but the class name.\"" code nil (reparse-symbol indented_block_body) [24689 24762])
+                    ("registerInitialState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24793 24797])
+                            ("state" variable nil (reparse-symbol function_parameters) [24799 24804]))                          )
+                        (reparse-symbol indented_block_body) [24768 25348])
+                    ("getAction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25367 25371])
+                            ("state" variable nil (reparse-symbol function_parameters) [25373 25378]))                          
+                        :documentation "
+        From game.py:
+        The Agent will receive a GameState and must return an action from
+        Directions.{North, South, East, West, Stop}
+        ")
+                        (reparse-symbol indented_block_body) [25353 25855]))                  
+                :type "class")
+                nil [24648 25855])
+            ("mazeDistance" function
+               (:documentation "
+    Returns the maze distance between any two points, using the search functions
+    you have already built.  The gameState can be any game state -- Pacman's position
+    in that state is ignored.
+
+    Example usage: mazeDistance( (2,4), (5,6), gameState)
+
+    This might be a useful helper function for your ApproximateSearchAgent.
+    "
+                :arguments 
+                  ( ("point1" variable nil (reparse-symbol function_parameters) [25876 25882])
+                    ("point2" variable nil (reparse-symbol function_parameters) [25884 25890])
+                    ("gameState" variable nil (reparse-symbol function_parameters) [25892 25901]))                  )
+                nil [25859 26567])
+            ("mazeActions" function
+               (:documentation "
+    Returns the maze distance between any two points, using the search functions
+    you have already built.  The gameState can be any game state -- Pacman's position
+    in that state is ignored.
+
+    Example usage: mazeDistance( (2,4), (5,6), gameState)
+
+    This might be a useful helper function for your ApproximateSearchAgent.
+    "
+                :arguments 
+                  ( ("point1" variable nil (reparse-symbol function_parameters) [26584 26590])
+                    ("point2" variable nil (reparse-symbol function_parameters) [26592 26598])
+                    ("gameState" variable nil (reparse-symbol function_parameters) [26600 26609]))                  )
+                nil [26568 27270])
+            ("MiniFoodSearchProblem" type
+               (:documentation "
+    A search problem associated with finding the a path that collects all of the
+    food (dots) in a Pacman game.
+
+    A search state in this problem is a tuple ( pacmanPosition, foodGrid ) where
+      pacmanPosition: a tuple (x,y) of integers specifying Pacman's position
+      foodGrid:       a Grid (see game.py) of either True or False, specifying remaining food
+    "
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("food" variable nil (reparse-symbol indented_block_body) [27746 27780])
+                            ("self" variable nil (reparse-symbol indented_block_body) [27789 27815])
+                            ("x, y, rx, ry" code nil (reparse-symbol indented_block_body) [27824 27845])
+                            ("for" code nil (reparse-symbol indented_block_body) [27854 28027])
+                            ("self" variable nil (reparse-symbol indented_block_body) [28035 28093])
+                            ("self" variable nil (reparse-symbol indented_block_body) [28102 28143])
+                            ("self" variable nil (reparse-symbol indented_block_body) [28152 28194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [28203 28221])
+                            ("self" variable nil (reparse-symbol indented_block_body) [28230 28253]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [27701 27705])
+                            ("startingGameState" variable nil (reparse-symbol function_parameters) [27707 27724])
+                            ("miniState" variable nil (reparse-symbol function_parameters) [27726 27735]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [27688 28308])
+                    ("getStartState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28331 28335]))                          )
+                        (reparse-symbol indented_block_body) [28313 28364])
+                    ("isGoalState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28385 28389])
+                            ("state" variable nil (reparse-symbol function_parameters) [28391 28396]))                          )
+                        (reparse-symbol indented_block_body) [28369 28436])
+                    ("getSuccessors" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28459 28463])
+                            ("state" variable nil (reparse-symbol function_parameters) [28465 28470]))                          )
+                        (reparse-symbol indented_block_body) [28441 29197])
+                    ("getCostOfActions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29223 29227])
+                            ("actions" variable nil (reparse-symbol function_parameters) [29229 29236]))                          
+                        :documentation "Returns the cost of a particular sequence of actions.  If those actions
+        include an illegal move, return 999999")
+                        (reparse-symbol indented_block_body) [29202 29728]))                  
+                :type "class")
+                nil [27271 29728])
+            ("miniFoodHeuristic" function (:arguments 
+              ( ("state" variable nil (reparse-symbol function_parameters) [29751 29756])
+                ("problem" variable nil (reparse-symbol function_parameters) [29758 29765]))              ) nil [29729 31015]))          
+    :file "searchAgents.py"
+    :pointmax 31015
+    :fsize 31014
+    :lastmodtime '(20758 63339 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "game.py"
+    :file "game.py"
+    :fsize 25277
+    :lastmodtime '(20743 34394 0 0)
+    )
+   (semanticdb-table "util.py"
+    :file "util.py"
+    :fsize 15273
+    :lastmodtime '(20743 34394 0 0)
+    )
+   (semanticdb-table "search.py"
+    :file "search.py"
+    :fsize 6461
+    :lastmodtime '(20758 6856 0 0)
+    )
+   )
+  :file "!Users!jsm!Repositories!cs!188!Project 1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

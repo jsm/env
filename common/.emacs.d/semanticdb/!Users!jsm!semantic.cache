@@ -1,0 +1,59 @@
+;; Object jsm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jsm/"
+  :tables (list 
+   (semanticdb-table "test.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("P" type
+               (:superclasses ("object")
+                :members 
+                  ( ("foo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31 35]))                          )
+                        (reparse-symbol indented_block_body) [23 71]))                  
+                :type "class")
+                nil [2 71])
+            ("p" variable nil nil [72 79])
+            ("p" code nil nil [80 87])
+            ("print" code nil nil [88 93])
+            ("C" type
+               (:superclasses ("P")
+                :members 
+                  ( ("foo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [119 123]))                          )
+                        (reparse-symbol indented_block_body) [111 159]))                  
+                :type "class")
+                nil [95 159])
+            ("c" variable nil nil [160 167])
+            ("c" code nil nil [168 175])
+            ("print" code nil nil [176 181])
+            ("P" code nil nil [183 191])
+            ("print" code nil nil [192 197])
+            ("C" type
+               (:superclasses ("P")
+                :members 
+                  ( ("foo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [223 227]))                          )
+                        (reparse-symbol indented_block_body) [215 286]))                  
+                :type "class")
+                nil [199 286])
+            ("c" variable nil nil [287 294])
+            ("c" code nil nil [295 302])
+            ("print" code nil nil [303 308]))          
+    :file "test.py"
+    :pointmax 309
+    :fsize 308
+    :lastmodtime '(20864 57250 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jsm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
