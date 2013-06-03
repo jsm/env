@@ -19,3 +19,6 @@
 [submodule "coffee-mode"]
 	path = common/.emacs.d/coffee-mode
 	url = git@github.com:defunkt/coffee-mode.git
+[submodule "nginx-mode"]
+	path = common/.emacs.d/nginx-mode
+	url = git://github.com/ajc/nginx-mode.git

@@ -17,6 +17,7 @@
 (add-to-list 'load-path "~/.emacs.d/php-mode")
 (add-to-list 'load-path "~/.emacs.d/haml-mode")
 (add-to-list 'load-path "~/.emacs.d/coffee-mode")
+(add-to-list 'load-path "~/.emacs.d/nginx-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -30,6 +31,7 @@
 (require 'haml-mode)
 (require 'coffee-mode)
 (require 'sass-mode)
+(require 'nginx-mode)
 (load "ws-trim")
 
 (ido-mode t)
