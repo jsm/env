@@ -19,6 +19,7 @@ alias cdc="cd ~/Repositories/current"
 alias cdcc="cd ~/Repositories/cc/"
 alias cdenv="cd ~/Repositories/env"
 alias cdl="cd ~/Work/code"
+alias cdrs="cd ~/Work/code/rockstar"
 alias myenv="cd -P ~/.env"
 
 alias ch="choose"
@@ -85,7 +86,7 @@ sym () {
 }
 
 setupwork () {
-    rvm use 1.9.3-p194@cc --default
+    rvm use 1.8.7@rockstar --default
 }
 
 setuphome () {
