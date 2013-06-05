@@ -18,6 +18,7 @@
 (add-to-list 'load-path "~/.emacs.d/haml-mode")
 (add-to-list 'load-path "~/.emacs.d/coffee-mode")
 (add-to-list 'load-path "~/.emacs.d/nginx-mode")
+(add-to-list 'load-path "~/.emacs.d/scss-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -31,6 +32,7 @@
 (require 'haml-mode)
 (require 'coffee-mode)
 (require 'sass-mode)
+(require 'scss-mode)
 (require 'nginx-mode)
 (load "ws-trim")
 

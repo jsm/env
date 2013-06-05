@@ -22,3 +22,6 @@
 [submodule "nginx-mode"]
 	path = common/.emacs.d/nginx-mode
 	url = git://github.com/ajc/nginx-mode.git
+[submodule "common/.emacs.d/scss-mode"]
+	path = common/.emacs.d/scss-mode
+	url = git://github.com/antonj/scss-mode.git
