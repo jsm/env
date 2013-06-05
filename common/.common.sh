@@ -19,7 +19,9 @@ alias cdc="cd ~/Repositories/current"
 alias cdcc="cd ~/Repositories/cc/"
 alias cdenv="cd ~/Repositories/env"
 alias cdl="cd ~/Work/code"
+alias cdlj="cd ~/Work/code/jsm"
 alias cdrs="cd ~/Work/code/rockstar"
+alias cdrs2="cd ~/Work/code/rockstar2"
 alias myenv="cd -P ~/.env"
 
 alias ch="choose"
@@ -27,7 +29,7 @@ alias ch="choose"
 alias envup="(cdenv ; git pull ; git subup)"
 alias envst="(cdenv ; git st)"
 
-alias prackup="CC_ENV=production rackup"
+alias railss="RAILS_ENV=staging bundle exec rails s"
 
 gr () {
     cd $(git rev-parse --show-toplevel)
