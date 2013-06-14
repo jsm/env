@@ -22,6 +22,7 @@ alias cdl="cd ~/Work/code"
 alias cdlj="cd ~/Work/code/jsm"
 alias cdrs="cd ~/Work/code/rockstar"
 alias cdrs2="cd ~/Work/code/rockstar2"
+alias cdrs3="cd ~/Work/code/rockstar3"
 alias myenv="cd -P ~/.env"
 
 alias ch="choose"
@@ -59,11 +60,11 @@ sshcs188 () {
 tc () {
     b=$1;
     if git checkout $b; then
-	: true;
+        : true;
     else
-	git checkout -b $b;
-	git push origin $b;
-	git branch --set-upstream $b origin/$b;
+        git checkout -b $b;
+        git push origin $b;
+        git branch -u origin/$b;
     fi
 }
 

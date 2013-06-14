@@ -34,7 +34,7 @@ alias a2="aquamacs2"
 alias a3="aquamacs3"
 alias aa="aquamacs2"
 
-alias mysqldump=mysqldump5
+alias mysqldump=mysqldump
 
 choose () {
     PS3="Choose a file to edit: "
