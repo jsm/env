@@ -38,3 +38,5 @@ hp1c () {
     rm -rf oDir
     hadoop jar proj1.jar  Proj1 -Dcombiner=true -conf conf.xml billOfRights.txt.seq iDir oDir
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
