@@ -4,6 +4,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 alias sudo="sudo "
 alias mkdir="mkdir -p"
+alias rm="rm -v"
 
 alias jserv="ssh -p 6464 -A jsm@sanmiguel.je"
 alias sshbare="ssh -p 6464 -A jsm@108.166.120.88"
