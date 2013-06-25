@@ -1,24 +1,24 @@
 [submodule "web-mode"]
     path = common/.emacs.d/web-mode
-	url = git@github.com:fxbois/web-mode.git
+	url = https://github.com/fxbois/web-mode.git
 [submodule "rinari"]
     path = common/.emacs.d/rinari
 	url = git://github.com/eschulte/rinari.git
 [submodule "rhtml"]
     path = common/.emacs.d/rhtml
-	url = git@github.com:eschulte/rhtml.git
+	url = https://github.com/eschulte/rhtml.git
 [submodule "ecb"]
 	path = common/.emacs.d/ecb
-	url = git@github.com:emacsmirror/ecb.git
+	url = https://github.com/emacsmirror/ecb.git
 [submodule "php-mode"]
 	path = common/.emacs.d/php-mode
-	url = git@github.com:ejmr/php-mode.git
+	url = https://github.com/ejmr/php-mode.git
 [submodule "haml-mode"]
 	path = common/.emacs.d/haml-mode
-	url = git@github.com:nex3/haml-mode.git
+	url = https://github.com/nex3/haml-mode.git
 [submodule "coffee-mode"]
 	path = common/.emacs.d/coffee-mode
-	url = git@github.com:defunkt/coffee-mode.git
+	url = https://github.com/defunkt/coffee-mode.git
 [submodule "nginx-mode"]
 	path = common/.emacs.d/nginx-mode
 	url = git://github.com/ajc/nginx-mode.git
