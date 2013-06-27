@@ -19,6 +19,7 @@
 (add-to-list 'load-path "~/.emacs.d/coffee-mode")
 (add-to-list 'load-path "~/.emacs.d/nginx-mode")
 (add-to-list 'load-path "~/.emacs.d/scss-mode")
+(add-to-list 'load-path "~/.emacs.d/yaml-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -34,6 +35,7 @@
 (require 'sass-mode)
 (require 'scss-mode)
 (require 'nginx-mode)
+(require 'yaml-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -68,6 +70,7 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (add-to-list 'auto-mode-alist '("\\.sass\\'" . sass-mode))
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
