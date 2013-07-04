@@ -28,3 +28,6 @@
 [submodule "yaml-mode"]
 	path = common/.emacs.d/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "powerline-shell"]
+	path = common/powerline-shell
+	url = https://github.com/milkbikis/powerline-shell

@@ -1,0 +1,1 @@
+../common/powerline-shell/powerline-shell.py
