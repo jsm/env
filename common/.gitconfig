@@ -21,7 +21,7 @@
     changed = yellow
     untracked = red
 [push]
-    default = current
+    default = simple
 [alias]
     wc = whatchanged --stat
     st = status
@@ -117,3 +117,4 @@
 
 [pull]
     rebase = true
+
