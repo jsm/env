@@ -1,0 +1,123 @@
+;; Object powerline-shell/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "powerline-shell/"
+  :tables (list 
+   (semanticdb-table "config.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("SEGMENTS" variable nil nil [380 1234])
+            ("THEME" variable nil nil [1304 1317]))          
+    :file "config.py"
+    :pointmax 1318
+    :fsize 1317
+    :lastmodtime '(20955 24744 0 0)
+    :unmatched-syntax '(($EOI 1318 . 1318) ($EOI 1287 . 1287) ($EOI 1286 . 1286) ($EOI 1289 . 1289))
+    )
+   (semanticdb-table "install.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("os" include nil nil [23 32])
+            ("stat" include nil nil [33 44])
+            ("config" include nil nil [45 58])
+            ("TEMPLATE_FILE" variable nil nil [60 105])
+            ("OUTPUT_FILE" variable nil nil [106 140])
+            ("SEGMENTS_DIR" variable nil nil [141 166])
+            ("THEMES_DIR" variable nil nil [167 188])
+            ("load_source" function (:arguments 
+              ( ("srcfile" variable nil (reparse-symbol function_parameters) [206 213]))              ) nil [190 364])
+            ("if" code nil nil [365 971]))          
+    :file "install.py"
+    :pointmax 971
+    :fsize 970
+    :lastmodtime '(20948 47876 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "powerline-shell.py.template"
+    :major-mode 'python-mode
+    :tags 
+        '( ("argparse" include nil nil [48 63])
+            ("os" include nil nil [64 73])
+            ("sys" include nil nil [74 84])
+            ("warn" function (:arguments 
+              ( ("msg" variable nil (reparse-symbol function_parameters) [95 98]))              ) nil [86 136])
+            ("Powerline" type
+               (:members 
+                  ( ("symbols" variable nil (reparse-symbol indented_block_body) [158 485])
+                    ("color_templates" variable nil (reparse-symbol indented_block_body) [491 598])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [643 659])
+                            ("self" variable nil (reparse-symbol indented_block_body) [668 682])
+                            ("mode, shell" code nil (reparse-symbol indented_block_body) [691 726])
+                            ("self" variable nil (reparse-symbol indented_block_body) [735 784])
+                            ("self" code nil (reparse-symbol indented_block_body) [793 833])
+                            ("self" variable nil (reparse-symbol indented_block_body) [842 895])
+                            ("self" variable nil (reparse-symbol indented_block_body) [904 967])
+                            ("self" variable nil (reparse-symbol indented_block_body) [976 994]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [617 621])
+                            ("args" variable nil (reparse-symbol function_parameters) [623 627])
+                            ("cwd" variable nil (reparse-symbol function_parameters) [629 632]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [604 995])
+                    ("color" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1010 1014])
+                            ("prefix" variable nil (reparse-symbol function_parameters) [1016 1022])
+                            ("code" variable nil (reparse-symbol function_parameters) [1024 1028]))                          )
+                        (reparse-symbol indented_block_body) [1000 1099])
+                    ("fgcolor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1116 1120])
+                            ("code" variable nil (reparse-symbol function_parameters) [1122 1126]))                          )
+                        (reparse-symbol indented_block_body) [1104 1167])
+                    ("bgcolor" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1184 1188])
+                            ("code" variable nil (reparse-symbol function_parameters) [1190 1194]))                          )
+                        (reparse-symbol indented_block_body) [1172 1235])
+                    ("append" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1251 1255])
+                            ("content" variable nil (reparse-symbol function_parameters) [1257 1264])
+                            ("fg" variable nil (reparse-symbol function_parameters) [1266 1268])
+                            ("bg" variable nil (reparse-symbol function_parameters) [1270 1272])
+                            ("separator" variable nil (reparse-symbol function_parameters) [1274 1283])
+                            ("separator_fg" variable nil (reparse-symbol function_parameters) [1290 1302]))                          )
+                        (reparse-symbol indented_block_body) [1240 1419])
+                    ("draw" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1433 1437]))                          )
+                        (reparse-symbol indented_block_body) [1424 1567])
+                    ("draw_segment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1589 1593])
+                            ("idx" variable nil (reparse-symbol function_parameters) [1595 1598]))                          )
+                        (reparse-symbol indented_block_body) [1572 1988]))                  
+                :type "class")
+                nil [137 1988])
+            ("get_valid_cwd" function (:documentation " We check if the current working directory is valid or not. Typically
+        happens when you checkout a different branch on git that doesn't have
+        this directory.
+        We return the original cwd because the shell still considers that to be
+        the working directory, so returning our guess will confuse people
+    ") nil [1989 2855])
+            ("if" code nil nil [2857 3767]))          
+    :file "powerline-shell.py.template"
+    :pointmax 3767
+    :fsize 3766
+    :lastmodtime '(20955 23527 0 0)
+    :unmatched-syntax '((NAME 1646 . 1658) (IF 1684 . 1686) (ELSE 1714 . 1718) ($EOI 3767 . 3767) (NAME 1660 . 1672) (IF 1698 . 1700) (ELSE 1728 . 1732) ($EOI 3781 . 3781) (NAME 1646 . 1658) (IF 1684 . 1686) (ELSE 1714 . 1718))
+    )
+   )
+  :file "!Users!jsm!Repositories!env!common!powerline-shell!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

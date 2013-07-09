@@ -1,0 +1,44 @@
+;; Object themes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "themes/"
+  :tables (list 
+   (semanticdb-table "jsm.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("Color" type
+               (:members 
+                  ( ("USERNAME_FG" variable nil (reparse-symbol indented_block_body) [18 35])
+                    ("USERNAME_BG" variable nil (reparse-symbol indented_block_body) [40 56])
+                    ("HOSTNAME_FG" variable nil (reparse-symbol indented_block_body) [62 79])
+                    ("HOSTNAME_BG" variable nil (reparse-symbol indented_block_body) [84 101])
+                    ("PATH_BG" variable nil (reparse-symbol indented_block_body) [160 173])
+                    ("PATH_FG" variable nil (reparse-symbol indented_block_body) [191 204])
+                    ("CWD_FG" variable nil (reparse-symbol indented_block_body) [223 235])
+                    ("SEPARATOR_FG" variable nil (reparse-symbol indented_block_body) [261 279])
+                    ("REPO_CLEAN_BG" variable nil (reparse-symbol indented_block_body) [285 304])
+                    ("REPO_CLEAN_FG" variable nil (reparse-symbol indented_block_body) [332 349])
+                    ("REPO_DIRTY_BG" variable nil (reparse-symbol indented_block_body) [363 382])
+                    ("REPO_DIRTY_FG" variable nil (reparse-symbol indented_block_body) [399 417])
+                    ("JOBS_FG" variable nil (reparse-symbol indented_block_body) [432 444])
+                    ("JOBS_BG" variable nil (reparse-symbol indented_block_body) [449 462])
+                    ("CMD_PASSED_BG" variable nil (reparse-symbol indented_block_body) [468 487])
+                    ("CMD_PASSED_FG" variable nil (reparse-symbol indented_block_body) [492 510])
+                    ("CMD_FAILED_BG" variable nil (reparse-symbol indented_block_body) [515 534])
+                    ("CMD_FAILED_FG" variable nil (reparse-symbol indented_block_body) [539 557])
+                    ("SVN_CHANGES_BG" variable nil (reparse-symbol indented_block_body) [563 583])
+                    ("SVN_CHANGES_FG" variable nil (reparse-symbol indented_block_body) [588 607])
+                    ("VIRTUAL_ENV_BG" variable nil (reparse-symbol indented_block_body) [627 646])
+                    ("VIRTUAL_ENV_FG" variable nil (reparse-symbol indented_block_body) [671 690]))                  
+                :type "class")
+                nil [1 691]))          
+    :file "jsm.py"
+    :pointmax 691
+    :fsize 690
+    :lastmodtime '(20955 24700 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jsm!Repositories!env!common!powerline-shell!themes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

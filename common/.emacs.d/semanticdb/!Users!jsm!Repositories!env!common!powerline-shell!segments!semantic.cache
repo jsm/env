@@ -1,0 +1,21 @@
+;; Object segments/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "segments/"
+  :tables (list 
+   (semanticdb-table "ruby_version.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("subprocess" include nil nil [1 18])
+            ("add_ruby_version_segment" function nil nil [21 292])
+            ("add_ruby_version_segment" code nil nil [293 319]))          
+    :file "ruby_version.py"
+    :pointmax 320
+    :fsize 319
+    :lastmodtime '(20955 24910 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!jsm!Repositories!env!common!powerline-shell!segments!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

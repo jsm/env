@@ -1,3 +1,5 @@
+export PATH=/Users/jsm/Library/Python/2.7/bin:$PATH
+
 alias e="emacs -nw"
 
 db_deploy () {
@@ -15,3 +17,4 @@ function _update_ps1() {
 }
 
 export PROMPT_COMMAND="_update_ps1"
+#. /Users/jsm/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
