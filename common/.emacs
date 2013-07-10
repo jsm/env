@@ -72,6 +72,7 @@
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\Capfile\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
