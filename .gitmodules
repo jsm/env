@@ -30,4 +30,4 @@
 	url = https://github.com/yoshiki/yaml-mode.git
 [submodule "powerline-shell"]
 	path = common/powerline-shell
-	url = https://github.com/milkbikis/powerline-shell
+	url = https://github.com/sanmiguelje/powerline-shell
