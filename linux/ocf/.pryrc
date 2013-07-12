@@ -1,1 +1,1 @@
-.pryrc
+../.pryrc

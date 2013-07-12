@@ -1,1 +1,1 @@
-common/.pryrc
+../common/.pryrc
