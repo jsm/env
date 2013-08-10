@@ -16,9 +16,10 @@ function _update_ps1() {
     export PS1="$(~/.powerline-shell.py $?)"
 }
 
-export PROMPT_COMMAND="_update_ps1"
-#. /Users/jsm/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+alias ccat=/usr/bin/cat
+alias cat="pygmentize -g"
 
+export PROMPT_COMMAND="_update_ps1"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
