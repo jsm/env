@@ -1,5 +1,3 @@
-export PATH=/Users/jsm/Library/Python/2.7/bin:$PATH
-
 alias e="emacs -nw"
 
 db_deploy () {
@@ -26,6 +24,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH=/opt/chef/embedded/bin:$PATH
 
+export PATH=/Users/jsm/Library/Python/2.7/bin:$PATH
+
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/cd" ]] && source "$HOME/.rvm/scripts/cd"
