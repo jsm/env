@@ -1,0 +1,29 @@
+if [ $# -ne 2 ]
+then
+    echo "Error in $0 - Invalid Argument Count"
+    echo "Syntax: $0 system profile"
+    exit
+fi
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT="$( cd "$( dirname "$DIR" )" && pwd )"
+ROOT=$DIR
+
+ln -nsf $ROOT"/$1/"$2 ~/.env
+
+ln -sf ~/.env/.bashrc ~/
+ln -sf ~/.env/.bash_profile ~/
+ln -sf ~/.env/.bash_aliases ~/
+ln -sf ~/.env/.bash_functions ~/
+ln -sf ~/.env/.powerline-shell.py ~/
+ln -sf ~/.env/.gitconfig ~/
+ln -sf ~/.env/.emacs ~/
+ln -sf ~/.env/.pryrc ~/
+rm -rf ~/.emacs.d
+ln -nsf ~/.env/.emacs.d ~/
+
+cd $ROOT
+git submodule sync
+git submodule update --init --recursive
+
+source ~/.bash_profile

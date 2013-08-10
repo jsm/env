@@ -18,3 +18,13 @@ function _update_ps1() {
 
 export PROMPT_COMMAND="_update_ps1"
 #. /Users/jsm/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH=/opt/chef/embedded/bin:$PATH
+
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
