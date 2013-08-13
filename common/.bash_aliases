@@ -1,6 +1,7 @@
 alias sudo="sudo "
 alias mkdir="mkdir -p"
 alias rm="rm -v"
+alias tarup="tar -cvzf"
 alias untar="tar -zxvf"
 
 alias cdcs="cd ~/Repositories/cs"
