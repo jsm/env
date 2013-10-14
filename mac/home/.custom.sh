@@ -12,6 +12,7 @@ db_migrate() {
 
 function _update_ps1() {
     export PS1="$(~/.powerline-shell.py $?)"
+    echo -ne "\\033]0;${PWD##*/}\\007"
 }
 
 alias ccat=/usr/bin/cat
