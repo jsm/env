@@ -36,6 +36,7 @@
 (require 'scss-mode)
 (require 'nginx-mode)
 (require 'yaml-mode)
+(require 'feature-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -73,6 +74,7 @@
 (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\Capfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.feature\\'" . feature-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
