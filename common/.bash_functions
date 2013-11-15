@@ -42,3 +42,7 @@ sym () {
     mv $1 $2
     ln -s $2$1
 }
+
+indentallrb () {
+    find . -iname \*.rb -exec emacs -nw {} --eval "(progn (mark-whole-buffer) (indent-region (point-min) (point-max) nil) (save-buffer))" --kill \;
+}
