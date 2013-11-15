@@ -31,3 +31,6 @@
 [submodule "powerline-shell"]
 	path = common/powerline-shell
 	url = https://github.com/sanmiguelje/powerline-shell
+[submodule "common/.emacs.d/git-modes"]
+	path = common/.emacs.d/git-modes
+	url = https://github.com/magit/git-modes.git

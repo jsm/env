@@ -20,6 +20,7 @@
 (add-to-list 'load-path "~/.emacs.d/nginx-mode")
 (add-to-list 'load-path "~/.emacs.d/scss-mode")
 (add-to-list 'load-path "~/.emacs.d/yaml-mode")
+(add-to-list 'load-path "~/.emacs.d/git-modes")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -37,6 +38,7 @@
 (require 'nginx-mode)
 (require 'yaml-mode)
 (require 'feature-mode)
+(require 'gitconfig-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -75,6 +77,8 @@
 (add-to-list 'auto-mode-alist '("\\Capfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.feature\\'" . feature-mode))
+(add-to-list 'auto-mode-alist '("\\.gitconfig\'" . gitconfig-mode))
+(add-to-list 'auto-mode-alist '("\\.gitmodules\'" . gitconfig-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
