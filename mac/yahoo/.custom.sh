@@ -2,6 +2,7 @@ export PATH=/Users/jsm/Library/Python/2.7/bin:$PATH
 
 alias e="emacs -nw"
 alias rv="ruby -e 'print RUBY_VERSION'"
+alias tar="gtar"
 
 db_deploy () {
     bundle exec rake db:reset
