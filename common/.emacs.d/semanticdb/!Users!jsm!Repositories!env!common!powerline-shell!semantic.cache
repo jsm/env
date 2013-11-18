@@ -9,8 +9,8 @@
             ("THEME" variable nil nil [1304 1317]))          
     :file "config.py"
     :pointmax 1318
-    :fsize 1317
-    :lastmodtime '(20955 24744 0 0)
+    :fsize 1324
+    :lastmodtime '(21105 32813 0 0)
     :unmatched-syntax '(($EOI 1318 . 1318) ($EOI 1287 . 1287) ($EOI 1286 . 1286) ($EOI 1289 . 1289))
     )
    (semanticdb-table "install.py"
@@ -29,7 +29,7 @@
     :file "install.py"
     :pointmax 971
     :fsize 970
-    :lastmodtime '(20948 47876 0 0)
+    :lastmodtime '(21105 32670 0 0)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "powerline-shell.py.template"
@@ -113,8 +113,15 @@
     :file "powerline-shell.py.template"
     :pointmax 3767
     :fsize 3766
-    :lastmodtime '(20955 23527 0 0)
+    :lastmodtime '(21105 32670 0 0)
     :unmatched-syntax '((NAME 1646 . 1658) (IF 1684 . 1686) (ELSE 1714 . 1718) ($EOI 3767 . 3767) (NAME 1660 . 1672) (IF 1698 . 1700) (ELSE 1728 . 1732) ($EOI 3781 . 3781) (NAME 1646 . 1658) (IF 1684 . 1686) (ELSE 1714 . 1718))
+    )
+   (semanticdb-table "cwd.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "cwd.py"
+    :pointmax 1
+    :unmatched-syntax 'nil
     )
    )
   :file "!Users!jsm!Repositories!env!common!powerline-shell!semantic.cache"

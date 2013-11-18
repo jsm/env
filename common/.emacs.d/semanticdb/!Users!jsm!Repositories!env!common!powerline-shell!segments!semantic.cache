@@ -11,7 +11,21 @@
     :file "ruby_version.py"
     :pointmax 320
     :fsize 319
-    :lastmodtime '(20955 24910 0 0)
+    :lastmodtime '(21105 32813 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cwd.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("os" include nil nil [1 10])
+            ("get_short_path" function (:arguments 
+              ( ("cwd" variable nil (reparse-symbol function_parameters) [31 34]))              ) nil [12 314])
+            ("add_cwd_segment" function nil nil [316 845])
+            ("add_cwd_segment" code nil nil [846 863]))          
+    :file "cwd.py"
+    :pointmax 864
+    :fsize 863
+    :lastmodtime '(21105 32961 0 0)
     :unmatched-syntax 'nil
     )
    )

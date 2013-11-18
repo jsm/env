@@ -15,7 +15,7 @@ function _update_ps1() {
     echo -ne "\\033]0;${PWD##*/}\\007"
 }
 
-alias ccat=/usr/bin/cat
+alias ccat=/bin/cat
 alias cat="pygmentize -g"
 
 export PROMPT_COMMAND="_update_ps1"
