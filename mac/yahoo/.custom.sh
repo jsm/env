@@ -26,3 +26,5 @@ export CATALINA_HOME="/opt/boxen/homebrew/Cellar/tomcat/7.0.41"
 export CATALINA_OPTS="$CATALINA_OPTS -Drun.env=stage"
 
 source /opt/boxen/env.sh
+
+[ -f `brew --prefix`/etc/bash_completion ] && source `brew --prefix`/etc/bash_completion
