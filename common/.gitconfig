@@ -70,7 +70,8 @@
     cpick = cherry-pick
     comit = commit
     ed = add --edit
-    cm = commit -m
+	cm = commit -m
+	prunelocal = "!git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
     # 'add all' stages all new+changed+deleted files
     aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add

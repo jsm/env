@@ -34,3 +34,6 @@
 [submodule "common/.emacs.d/git-modes"]
 	path = common/.emacs.d/git-modes
 	url = https://github.com/magit/git-modes.git
+[submodule "yasnippet"]
+	path = common/.emacs.d/yasnippet
+	url = https://github.com/capitaomorte/yasnippet

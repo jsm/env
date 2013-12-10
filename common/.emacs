@@ -21,6 +21,8 @@
 (add-to-list 'load-path "~/.emacs.d/scss-mode")
 (add-to-list 'load-path "~/.emacs.d/yaml-mode")
 (add-to-list 'load-path "~/.emacs.d/git-modes")
+(add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/yasnippet")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -39,9 +41,31 @@
 (require 'yaml-mode)
 (require 'feature-mode)
 (require 'gitconfig-mode)
+(require 'yasnippet)
+(require 'auto-complete-config)
 (load "ws-trim")
 
 (ido-mode t)
+
+;; Javascript Enhancements
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"                 ;; personal snippets
+        "~/.emacs.d/yasnippet/yasmate/snippets" ;; the yasmate collection
+        "~/.emacs.d/yasnippet/snippets"         ;; the default collection
+        ))
+(yas-global-mode 1)
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "M-n") 'yas-expand)
+(add-to-list 'ac-dictionary-directories "~/emacs/auto-complete/dict")
+; Use dictionaries by default
+(setq-default ac-sources (add-to-list 'ac-sources 'ac-source-dictionary))
+(global-auto-complete-mode t)
+; Start auto-completion after 2 characters of a word
+(setq ac-auto-start 2)
+; case sensitivity is important when finding matches
+(setq ac-ignore-case nil)
+(add-to-list 'ac-sources 'ac-source-yasnippet)
 
 ;; Rinari Vars
 (setq
