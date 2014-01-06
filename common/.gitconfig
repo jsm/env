@@ -94,7 +94,7 @@
 [core]
 	editor = emacs
     autocrlf = false
-    excludesfile = ~/.gitignore-global
+	excludesfile = ~/.gitignore
     whitespace=trailing-space,cr-at-eol
 [status]
     submodulesummary = true
