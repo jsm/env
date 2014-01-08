@@ -1,123 +1,123 @@
 [user]
-    name = Jon San Miguel
-    email = sanmiguelje@yahoo.com
+	name = Jon San Miguel
+	email = sanmiguelje@yahoo.com
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    grep = auto
-    interactive = auto
-    ui = auto
-    current = yellow reverse
-    local = yellow
-    remote = green
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+	interactive = auto
+	ui = auto
+	current = yellow reverse
+	local = yellow
+	remote = green
 [color "diff"]
-    whitespace = red reverse
-    frag = cyan
-    old = red bold
-    new = green bold
+	whitespace = red reverse
+	frag = cyan
+	old = red bold
+	new = green bold
 [color "status"]
-    added = green
-    changed = yellow
-    untracked = red
+	added = green
+	changed = yellow
+	untracked = red
 [push]
-    default = upstream
+	default = upstream
 [alias]
-    wc = whatchanged --stat
-    st = status
-    stat = status -sb
-    br = branch -vv
-    chekcout = checkout
-    up = fetch -pt --all
-    d  = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git wc ^$B $RB
-    rd = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git wc ^$RB $B
-    m  = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git merge $RB
-    sub = submodule
-    subup = !git submodule sync && git submodule update --init --recursive
-    remotes = remote -v show
-    rev = rev-parse HEAD
-    cl = clone --recursive
-    human = name-rev --name-only --refs=refs/heads/*
-    humin = name-rev --name-only --refs=refs/heads/* --stdin
-    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
-    sb = show-branch
-    wd = diff --word-diff
-    dt = difftool -y
-    cat = cat-file
-    ll = log --oneline --graph
-    ls = ls-files
+	wc = whatchanged --stat
+	st = status
+	stat = status -sb
+	br = branch -vv
+	chekcout = checkout
+	up = fetch -pt --all
+	d  = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git wc ^$B $RB
+	rd = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git wc ^$RB $B
+	m  = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git merge $RB
+	sub = submodule
+	subup = !git submodule sync && git submodule update --init --recursive
+	remotes = remote -v show
+	rev = rev-parse HEAD
+	cl = clone --recursive
+	human = name-rev --name-only --refs=refs/heads/*
+	humin = name-rev --name-only --refs=refs/heads/* --stdin
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+	sb = show-branch
+	wd = diff --word-diff
+	dt = difftool -y
+	cat = cat-file
+	ll = log --oneline --graph
+	ls = ls-files
+	cdiff = diff --cached
 
-    # only add changed
-    av = add -v
-    ad = add
-    aad = add
-    addd = add
-    ass = add
-    # stash show
-    ss = "!sh -c 'git show $(git stash list | cut -d\":\" -f 1)'"
-    co = checkout
-    st = status
-    diff = diff --ignore-space-change
-    df = diff --ignore-space-change
-    dc = diff --cached --ignore-space-change
-    lg = log -p
-    who = shortlog -s --
-    pl = pull
-    ph = push
-    safemerge = merge --no-commit --no-ff
-    sb = submodule
-    wm = branch -r --merged
-    cpick = cherry-pick
-    comit = commit
-    ed = add --edit
+	# only add changed
+	av = add -v
+	ad = add
+	aad = add
+	addd = add
+	ass = add
+	# stash show
+	ss = "!sh -c 'git show $(git stash list | cut -d\":\" -f 1)'"
+	co = checkout
+	st = status
+	diff = diff --ignore-space-change
+	df = diff --ignore-space-change
+	dc = diff --cached --ignore-space-change
+	lg = log -p
+	who = shortlog -s --
+	pl = pull
+	ph = push
+	safemerge = merge --no-commit --no-ff
+	sb = submodule
+	wm = branch -r --merged
+	cpick = cherry-pick
+	comit = commit
+	ed = add --edit
 	cm = commit -m
-	prunelocal = "!git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
-    # 'add all' stages all new+changed+deleted files
-    aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add
-    # 'add grep' stages all new+changed that match $1
-    ag = "!sh -c 'git ls-files -m -o --exclude-standard | grep $1 | xargs -r git add' -"
-    # 'checkout grep' checkouts any files that match $1
-    cg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git checkout' -"
-    # 'diff grep' diffs any files that match $1
-    dg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff' -"
-    # 'patch grep' diff --cached any files that match $1
-    pg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff --cached' -"
-    # 'remove grep' remove any files that match $1
-    rmg = "!sh -c 'git ls-files | grep $1 | xargs -r git rm' -"
-    # 'reset grep' reset any files that match $1
-    rsg = "!sh -c 'git ls-files -c --with-tree=HEAD | grep $1 | xargs -r git reset HEAD -- ' -"
-    # nice log output
-    lg2 = log --graph --pretty=oneline --abbrev-commit --decorate
-    # start git-sh
-    sh = !git-sh
+	# 'add all' stages all new+changed+deleted files
+	aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add
+	# 'add grep' stages all new+changed that match $1
+	ag = "!sh -c 'git ls-files -m -o --exclude-standard | grep $1 | xargs -r git add' -"
+	# 'checkout grep' checkouts any files that match $1
+	cg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git checkout' -"
+	# 'diff grep' diffs any files that match $1
+	dg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff' -"
+	# 'patch grep' diff --cached any files that match $1
+	pg = "!sh -c 'git ls-files -m | grep $1 | xargs -r git diff --cached' -"
+	# 'remove grep' remove any files that match $1
+	rmg = "!sh -c 'git ls-files | grep $1 | xargs -r git rm' -"
+	# 'reset grep' reset any files that match $1
+	rsg = "!sh -c 'git ls-files -c --with-tree=HEAD | grep $1 | xargs -r git reset HEAD -- ' -"
+	# nice log output
+	lg2 = log --graph --pretty=oneline --abbrev-commit --decorate
+	# start git-sh
+	sh = !git-sh
 [core]
 	editor = emacs
-    autocrlf = false
+	autocrlf = false
 	excludesfile = ~/.gitignore
-    whitespace=trailing-space,cr-at-eol
+	whitespace=trailing-space,cr-at-eol
 [status]
-    submodulesummary = true
+	submodulesummary = true
 [merge]
-    stat = true
-    conflictstyle = diff3
-    defaultToUpstream = true
-    renamelimit = 2000
+	stat = true
+	conflictstyle = diff3
+	defaultToUpstream = true
+	renamelimit = 2000
 [rerere]
-    enabled = true
-    autoupdate = true
+	enabled = true
+	autoupdate = true
 [branch]
-    autosetupmerge = true
+	autosetupmerge = true
 [giggle]
-    main-window-maximized = true
-    main-window-geometry = 467x281+350+269
-    main-window-view = FileView
-    file-view-hpane-position = 597
-    history-view-vpane-position = 801
-    file-view-vpane-position = 851
+	main-window-maximized = true
+	main-window-geometry = 467x281+350+269
+	main-window-view = FileView
+	file-view-hpane-position = 597
+	history-view-vpane-position = 801
+	file-view-vpane-position = 851
 
 [pull]
-    rebase = true
+	rebase = true
 
 [credential]
 	helper = cache
