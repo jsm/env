@@ -32,5 +32,12 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+export PATH=/opti/optimizely/out:$PATH
+export PATH=/opti/optimizely/out/ec2_api_tools/bin:$PATH
+export EC2_HOME=/opti/optimizely/out/ec2_api_tools
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.rvm/scripts/cd" ]] && source "$HOME/.rvm/scripts/cd"
+
+ssh-add ~/.ssh/id_rsa_optimizely
