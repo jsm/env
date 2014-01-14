@@ -43,6 +43,7 @@
 (require 'gitconfig-mode)
 (require 'yasnippet)
 (require 'auto-complete-config)
+(require 'python-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -103,6 +104,8 @@
 (add-to-list 'auto-mode-alist '("\\.feature\\'" . feature-mode))
 (add-to-list 'auto-mode-alist '("\\.gitconfig\'" . gitconfig-mode))
 (add-to-list 'auto-mode-alist '("\\.gitmodules\'" . gitconfig-mode))
+
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -194,6 +197,21 @@
 ;; python mode
 (add-hook 'python-mode-hook
           (lambda () (semantic-mode)))
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args ""
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+ "from IPython.core.completerlib import module_completion"
+ python-shell-completion-module-string-code
+ "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+ "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+  (flet ((process-list ())) ad-do-it))
+
 
 ;; rhtml mode
 (add-hook 'rhtml-mode-hook
