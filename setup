@@ -19,6 +19,7 @@ ln -sf ~/.env/.powerline-shell.py ~/
 ln -sf ~/.env/.gitconfig ~/
 ln -sf ~/.env/.gitignore ~/
 ln -sf ~/.env/.emacs ~/
+ln -sf ~/.env/.emacs.slim ~/
 ln -sf ~/.env/.pryrc ~/
 rm -rf ~/.emacs.d
 ln -nsf ~/.env/.emacs.d ~/

@@ -34,3 +34,6 @@ alias envup="(cdenv ; git pull ; git subup)"
 alias envst="(cdenv ; git st)"
 
 alias railss="RAILS_ENV=staging bundle exec rails s"
+
+alias slem="emacs -q -l ~/.emacs.slim"
+alias s="e -q -l ~/.emacs.slim"
