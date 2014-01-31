@@ -1,4 +1,4 @@
-alias sudo="sudo "
+B0;95;calias sudo="sudo "
 alias mkdir="mkdir -p"
 alias rm="rm -v"
 alias tarup="tar -cvzf"
@@ -33,7 +33,8 @@ alias ch="choose"
 alias envup="(cdenv ; git pull ; git subup)"
 alias envst="(cdenv ; git st)"
 
-alias railss="RAILS_ENV=staging bundle exec rails s"
+alias srs="RAILS_ENV=staging bundle exec rails s"
+alias prc="RAILS_ENV=production bundle exec rails console"
 
 alias slem="emacs -q -l ~/.emacs.slim"
 alias s="e -q -l ~/.emacs.slim"
