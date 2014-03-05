@@ -1,4 +1,4 @@
-B0;95;calias sudo="sudo "
+alias sudo="sudo "
 alias mkdir="mkdir -p"
 alias rm="rm -v"
 alias tarup="tar -cvzf"
