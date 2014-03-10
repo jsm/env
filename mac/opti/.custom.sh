@@ -17,8 +17,9 @@ function _update_ps1() {
 
 alias ccat=/bin/cat
 alias cat="pygmentize -g"
-alias cdo="cd /opti"
-alias cdopt="cd /opti/optimizely"
+alias cdo="cd /o"
+alias cdopt="cd /o/optimizely"
+alias gate="tail /o/optimizely/doc/gatekeeper.md"
 
 export PROMPT_COMMAND="_update_ps1"
 
@@ -34,11 +35,17 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-export PATH=/opti/optimizely/out:$PATH
-export PATH=/opti/optimizely/out/ec2_api_tools/bin:$PATH
-export EC2_HOME=/opti/optimizely/out/ec2_api_tools
+export PATH=/o/optimizely/out:$PATH
+export PATH=/o/optimizely/out/ec2_api_tools/bin:$PATH
+export EC2_HOME=/o/optimizely/out/ec2_api_tools
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.rvm/scripts/cd" ]] && source "$HOME/.rvm/scripts/cd"
 
 ssh-add ~/.ssh/id_rsa_optimizely
+
+# Add arcanist to PATH environment variable
+export PATH=/o/tools/arcanist/bin:$PATH
+
+# Add tab completion at the command-line
+source /o/tools/arcanist/resources/shell/bash-completion
