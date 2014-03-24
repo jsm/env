@@ -19,6 +19,7 @@ alias ccat=/bin/cat
 alias cat="pygmentize -g"
 alias cdo="cd /o"
 alias cdopt="cd /o/optimizely"
+alias cdops="cd /o/opstimizely-culinaryinstitute"
 alias gate="tail /o/optimizely/doc/gatekeeper.md"
 
 export PROMPT_COMMAND="_update_ps1"
@@ -34,6 +35,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+export PATH=$PATH:$(find -L "/bin" -type d | sed "/\/\\./d" | tr "\n" ":" | sed "s/:$//")
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export PATH=/o/optimizely/out:$PATH
 export PATH=/o/optimizely/out/ec2_api_tools/bin:$PATH
