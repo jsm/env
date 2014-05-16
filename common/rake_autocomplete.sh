@@ -63,8 +63,6 @@ function _rakecomplete() {
     return 1
   fi
 
-  rake_root=$(rake --silent self:root)
-
   # build cache if missing
   if [ ! -e "$(_rake_cache_path)" ]; then
     rake_cache_store

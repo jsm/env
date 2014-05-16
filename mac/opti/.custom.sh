@@ -1,3 +1,6 @@
+# Rake autocomplete
+source ~/.env/rake_autocomplete.sh
+
 alias e="emacs -nw"
 
 db_deploy () {
@@ -54,6 +57,3 @@ source /o/tools/arcanist/resources/shell/bash-completion
 
 # added by travis gem
 [ -f /Users/jsm/.travis/travis.sh ] && source /Users/jsm/.travis/travis.sh
-
-# Rake autocomplete
-source ~/.env/rake_autocomplete.sh
