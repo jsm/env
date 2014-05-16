@@ -1,0 +1,1 @@
+../rake_autocomplete.sh
