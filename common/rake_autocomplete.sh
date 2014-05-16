@@ -35,12 +35,12 @@ upsearch () {
 }
 
 function _rake_cache_path() {
-  # If in a Rails app, put the cache in the cache dir
+  # If a tmp directory exists, put the cache in the tmp dir
   # so version control ignores it
-  if [ -e '${rake_root}tmp/cache' ]; then
-    prefix='tmp/cache/'
+  if [ -e "${rake_root}/tmp" ]; then
+    prefix='tmp/'
   fi
-  echo "${rake_root}${prefix}.rake_t_cache"
+  echo "${rake_root}/${prefix}.rake_t_cache"
 }
 
 function rake_cache_store() {
