@@ -51,3 +51,6 @@ export PATH=/o/tools/arcanist/bin:$PATH
 
 # Add tab completion at the command-line
 source /o/tools/arcanist/resources/shell/bash-completion
+
+# added by travis gem
+[ -f /Users/jsm/.travis/travis.sh ] && source /Users/jsm/.travis/travis.sh
