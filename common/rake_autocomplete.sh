@@ -17,13 +17,30 @@
 # To clear the cache, run rake_cache_clear() in your shell.
 #
 
+upsearch () {
+    up_to=$1
+    curdir=`pwd`
+    result=1
+
+    while [[ "`pwd`" != "$up_to" && "`pwd`" != '/' ]]; do
+        if [[ -f Rakefile  ]]; then
+            result=0
+            rake_root=$(pwd)
+            break
+        fi
+        cd ..
+    done
+    cd $curdir
+    return $result
+}
+
 function _rake_cache_path() {
   # If in a Rails app, put the cache in the cache dir
   # so version control ignores it
-  if [ -e 'tmp/cache' ]; then
+  if [ -e '${rake_root}tmp/cache' ]; then
     prefix='tmp/cache/'
   fi
-  echo "${prefix}.rake_t_cache"
+  echo "${rake_root}${prefix}.rake_t_cache"
 }
 
 function rake_cache_store() {
@@ -39,10 +56,14 @@ export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
 
 function _rakecomplete() {
   # error if no Rakefile
-  if [ ! -e Rakefile ]; then
-    echo "missing Rakefile"
+  if upsearch; then
+    :
+  else
+    echo "NO RAKEFILE"
     return 1
   fi
+
+  rake_root=$(rake --silent self:root)
 
   # build cache if missing
   if [ ! -e "$(_rake_cache_path)" ]; then
