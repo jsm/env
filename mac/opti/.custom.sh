@@ -50,10 +50,10 @@ export EC2_HOME=/o/optimizely/out/ec2_api_tools
 ssh-add ~/.ssh/id_rsa_optimizely
 
 # Add arcanist to PATH environment variable
-export PATH=/o/tools/arcanist/bin:$PATH
+export PATH=/o/mytools/arcanist/bin:$PATH
 
 # Add tab completion at the command-line
-source /o/tools/arcanist/resources/shell/bash-completion
+source /o/mytools/arcanist/resources/shell/bash-completion
 
 # added by travis gem
 [ -f /Users/jsm/.travis/travis.sh ] && source /Users/jsm/.travis/travis.sh
