@@ -30,7 +30,7 @@ export PROMPT_COMMAND="_update_ps1"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH=/opt/chef/embedded/bin:$PATH
+#export PATH=/opt/chef/embedded/bin:$PATH
 
 export PATH=/Users/jsm/Library/Python/2.7/bin:$PATH
 
@@ -57,3 +57,5 @@ source /o/mytools/arcanist/resources/shell/bash-completion
 
 # added by travis gem
 [ -f /Users/jsm/.travis/travis.sh ] && source /Users/jsm/.travis/travis.sh
+
+export COOKBOOK_PATH=/o/kitchen/cookbooks
