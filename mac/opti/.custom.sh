@@ -58,4 +58,7 @@ source /o/mytools/arcanist/resources/shell/bash-completion
 # added by travis gem
 [ -f /Users/jsm/.travis/travis.sh ] && source /Users/jsm/.travis/travis.sh
 
+#AWS CLI
+source /Users/jsm/.aws
+
 export COOKBOOK_PATH=/o/kitchen/cookbooks
