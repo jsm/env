@@ -62,3 +62,7 @@ source /o/mytools/arcanist/resources/shell/bash-completion
 source /Users/jsm/.aws
 
 export COOKBOOK_PATH=/o/kitchen/cookbooks
+
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
+source /o/optimizely/.source_this.sh

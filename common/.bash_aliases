@@ -38,3 +38,5 @@ alias prc="RAILS_ENV=production bundle exec rails console"
 
 alias slem="emacs -q -l ~/.emacs.slim"
 alias s="e -q -l ~/.emacs.slim"
+
+alias kit="kitchen"
