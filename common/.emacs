@@ -24,7 +24,6 @@
 (add-to-list 'load-path "~/.emacs.d/git-modes")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/yasnippet")
-(add-to-list 'load-path "~/.emacs.d/powerline")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -47,7 +46,6 @@
 (require 'auto-complete-config)
 (require 'python-mode)
 (require 'color-theme-sanityinc-tomorrow)
-(require 'powerline)
 (load "ws-trim")
 
 (ido-mode t)
