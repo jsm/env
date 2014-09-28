@@ -23,6 +23,8 @@ alias cat="pygmentize -g"
 alias cdo="cd /o"
 alias cdopt="cd /o/optimizely"
 alias cdops="cd /o/opstimizely-culinaryinstitute"
+alias cdok="cd /o/kitchen"
+alias cdor="cd /o/optimizelyrake"
 alias gate="tail /o/optimizely/doc/gatekeeper.md"
 
 export PROMPT_COMMAND="_update_ps1"
@@ -65,4 +67,4 @@ export COOKBOOK_PATH=/o/kitchen/cookbooks
 
 export DOCKER_HOST=tcp://192.168.59.103:2375
 
-source /o/optimizely/.source_this.sh
+source /o/optimizelyrake/.source_this.sh
