@@ -10,6 +10,7 @@
 (setq vc-follow-symlinks t)
 
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-tomorrow/")
 (add-to-list 'load-path "~/.emacs.d/ecb/")
 (add-to-list 'load-path "~/.emacs.d/web-mode/")
 (add-to-list 'load-path "~/.emacs.d/rinari/")
@@ -23,6 +24,7 @@
 (add-to-list 'load-path "~/.emacs.d/git-modes")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/yasnippet")
+(add-to-list 'load-path "~/.emacs.d/powerline")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -44,6 +46,8 @@
 (require 'yasnippet)
 (require 'auto-complete-config)
 (require 'python-mode)
+(require 'color-theme-sanityinc-tomorrow)
+(require 'powerline)
 (load "ws-trim")
 
 (ido-mode t)
@@ -283,9 +287,6 @@
 
 ;; aquamacs set opacity
 (add-to-list 'default-frame-alist '(alpha . (80 70)))
-;; aquamacs switch to white on black
-(require 'color-theme)
-(color-theme-clarity)
 
 (defface extra-whitespace-face
   '((t (:background "pale green")))
@@ -335,13 +336,21 @@
 
 ;; force tab
 (global-set-key (kbd "C-<tab>") 'tab-to-tab-stop)
+
+;; Line Numbers
+(global-linum-mode 1)
+;; use customized linum-format: add a addition space after the line number
+(setq linum-format (lambda (line) (propertize (format (let ((w (length (number-to-string (count-lines (point-min) (point-max)))))) (concat "%" (number-to-string w) "d ")) line) 'face 'linum)))
+;; Start Everything I want to
+;; (ecb-activate)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40")
- '(safe-local-variable-values (quote ((setq ruby-indent-tabs-mode nil) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby")))))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
+ '(custom-safe-themes (quote ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -349,6 +358,5 @@
  ;; If there is more than one, they won't work right.
  )
 
-
-;; Start Everything I want to
-;; (ecb-activate)
+;; Load Color Theme
+(load-theme 'sanityinc-tomorrow-bright 1)

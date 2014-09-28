@@ -37,3 +37,6 @@
 [submodule "yasnippet"]
 	path = common/.emacs.d/yasnippet
 	url = https://github.com/capitaomorte/yasnippet
+[submodule "common/.emacs.d/color-theme-sanityinc-tomorrow"]
+	path = common/.emacs.d/color-theme-sanityinc-tomorrow
+	url = https://github.com/purcell/color-theme-sanityinc-tomorrow.git
