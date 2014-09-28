@@ -284,7 +284,7 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; aquamacs set opacity
-(add-to-list 'default-frame-alist '(alpha . (80 70)))
+(add-to-list 'default-frame-alist '(alpha . (85 75)))
 
 (defface extra-whitespace-face
   '((t (:background "pale green")))
