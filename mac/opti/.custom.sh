@@ -38,7 +38,6 @@ export PATH=/Users/jsm/Library/Python/2.7/bin:$PATH
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PATH=$PATH:$(find -L "/bin" -type d | sed "/\/\\./d" | tr "\n" ":" | sed "s/:$//")
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
@@ -46,8 +45,6 @@ export PATH=/o/optimizely/out:$PATH
 export PATH=/o/optimizely/out/ec2_api_tools/bin:$PATH
 export EC2_HOME=/o/optimizely/out/ec2_api_tools
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -s "$HOME/.rvm/scripts/cd" ]] && source "$HOME/.rvm/scripts/cd"
 
 ssh-add ~/.ssh/id_rsa_optimizely
 
@@ -68,3 +65,7 @@ export COOKBOOK_PATH=/o/kitchen/cookbooks
 export DOCKER_HOST=tcp://192.168.59.103:2375
 
 source /o/optimizelyrake/.source_this.sh
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/cd" ]] && source "$HOME/.rvm/scripts/cd"

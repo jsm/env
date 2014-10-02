@@ -3,6 +3,7 @@ alias mkdir="mkdir -p"
 alias rm="rm -v"
 alias tarup="tar -cvzf"
 alias untar="tar -zxvf"
+alias cgrep="grep --color=always"
 
 alias cdcs="cd ~/Repositories/cs"
 alias cdr="cd ~/Repositories/"

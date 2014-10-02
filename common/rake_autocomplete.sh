@@ -44,12 +44,12 @@ function _rake_cache_path() {
 }
 
 function rake_cache_store() {
-  rake --tasks --silent > "$(_rake_cache_path)"
+  rake tasks_only > "$(_rake_cache_path)"
 }
 
 function rake_cache_clear() {
   rm -f .rake_t_cache
-  rm -f tmp/cache/.rake_t_cache
+  rm -f tmp/.rake_t_cache
 }
 
 export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
