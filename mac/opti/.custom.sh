@@ -68,4 +68,3 @@ source /o/optimizelyrake/.source_this.sh
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-[[ -s "$HOME/.rvm/scripts/cd" ]] && source "$HOME/.rvm/scripts/cd"
