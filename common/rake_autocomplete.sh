@@ -44,7 +44,7 @@ function _rake_cache_path() {
 }
 
 function rake_cache_store() {
-  rake tasks_only > "$(_rake_cache_path)"
+  rake tasks_only > "$(_rake_cache_path)" || true
 }
 
 function rake_cache_clear() {

@@ -12,24 +12,6 @@ delete_all () {
 }
 alias remove_all="delete_all"
 
-tc () {
-    b=$1;
-    if git checkout $b; then
-        : true;
-    else
-        git checkout -b $b;
-        git push origin $b;
-        git branch -u origin/$b;
-    fi
-}
-
-gd () {
-    b=$1
-    git branch -r -d origin/$b
-    git branch -D $b
-    git push origin :$b
-}
-
 newrepo () {
     git init
     git add README.md
