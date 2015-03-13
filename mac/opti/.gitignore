@@ -2,3 +2,4 @@
 .ruby-gemset
 optimizely.iml
 .rbenv
+.arclint

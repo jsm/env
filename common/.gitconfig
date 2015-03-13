@@ -28,7 +28,7 @@
 	stat = status -sb
 	br = branch -vv
 	chekcout = checkout
-	up = fetch -pt --all
+	up = !git fetch origin && git rebase origin/master
 	d  = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git wc ^$B $RB
 	rd = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git wc ^$RB $B
 	m  = !read B RB <<<$(git branch -vv | ruby -ne 'puts $_.match(%r<\\* ([^\\s]+)\\s+\\w+\\s+\\[([^:\\]]+)>)[1,2] * \" \" rescue nil') && git merge $RB
@@ -48,7 +48,9 @@
 	ls = ls-files
 	cdiff = diff --cached
 	switch = "!tc () { b=$1; if git show-ref --verify --quiet refs/heads/$b; then git checkout $b; else git checkout -b $b; git push origin $b; git branch -u origin/$b; fi; }; tc"
+	sw = "!git switch"
 	destroy = "!gd () { b=$1; git branch -r -d origin/$b; git branch -D $b; git push origin :$b; }; gd"
+	rrebase = "!rrebase () { b=$1; git fetch origin; git rebase origin/$b; }; rrebase"
 	# only add changed
 	av = add -v
 	ad = add
@@ -73,6 +75,8 @@
 	comit = commit
 	ed = add --edit
 	cm = commit -m
+	pop = !git stash list -1 && git stash pop
+	rhard = git reset --hard
 
 	# 'add all' stages all new+changed+deleted files
 	aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add
@@ -97,6 +101,7 @@
 	autocrlf = false
 	excludesfile = ~/.gitignore
 	whitespace=trailing-space,cr-at-eol
+	ignorecase = true
 [status]
 	submodulesummary = true
 [merge]

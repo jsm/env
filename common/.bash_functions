@@ -36,3 +36,12 @@ prunelocal () {
 test_connection () {
     nc -v -w 1 $1 -z $2
 }
+
+gpgencrypt () {
+    gpg --output $1.gpg --encrypt --recipient $2 $1
+}
+
+rake () {
+    commands=$(echo "$@" | sed -e 's/\[\([^]]*\)\]/["\1"]/g')  # Wraps the array parameters with quotes
+    eval "bundle exec rake "$commands  # Evaluates the rake command without having to manually add quotes
+}

@@ -62,9 +62,13 @@ source /Users/jsm/.aws
 
 export COOKBOOK_PATH=/o/kitchen/cookbooks
 
-export DOCKER_HOST=tcp://192.168.59.103:2375
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/jsm/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
-source /o/optimizelyrake/.source_this.sh
+source /o/optimizely/.source_this.sh
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+alias bfg="java -jar ~/Applications/bfg.jar"
