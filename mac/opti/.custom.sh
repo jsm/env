@@ -72,3 +72,11 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 alias bfg="java -jar ~/Applications/bfg.jar"
+
+export EDITOR="emacs -q -l ~/.emacs.slim"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/jsm/google-cloud-sdk/path.bash.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/jsm/google-cloud-sdk/completion.bash.inc'
