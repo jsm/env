@@ -40,3 +40,6 @@
 [submodule "common/.emacs.d/color-theme-sanityinc-tomorrow"]
 	path = common/.emacs.d/color-theme-sanityinc-tomorrow
 	url = https://github.com/purcell/color-theme-sanityinc-tomorrow.git
+[submodule "common/.emacs.d/rust-mode"]
+	path = common/.emacs.d/rust-mode
+	url = https://github.com/rust-lang/rust-mode

@@ -24,6 +24,7 @@
 (add-to-list 'load-path "~/.emacs.d/git-modes")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/yasnippet")
+(add-to-list 'load-path "~/.emacs.d/rust-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -46,6 +47,7 @@
 (require 'auto-complete-config)
 (require 'python-mode)
 (require 'color-theme-sanityinc-tomorrow)
+(require 'rust-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -106,6 +108,7 @@
 (add-to-list 'auto-mode-alist '("\\.feature\\'" . feature-mode))
 (add-to-list 'auto-mode-alist '("\\.gitconfig\'" . gitconfig-mode))
 (add-to-list 'auto-mode-alist '("\\.gitmodules\'" . gitconfig-mode))
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
