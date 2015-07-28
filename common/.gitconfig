@@ -76,7 +76,7 @@
 	ed = add --edit
 	cm = commit -m
 	pop = !git stash list -1 && git stash pop
-	rhard = git reset --hard
+	rhard = reset --hard
 
 	# 'add all' stages all new+changed+deleted files
 	aa = !git ls-files -d | xargs -r git rm && git ls-files -m -o --exclude-standard | xargs -r git add

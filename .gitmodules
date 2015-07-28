@@ -43,3 +43,6 @@
 [submodule "common/.emacs.d/rust-mode"]
 	path = common/.emacs.d/rust-mode
 	url = https://github.com/rust-lang/rust-mode
+[submodule "common/.emacs.d/elixir"]
+	path = common/.emacs.d/elixir
+	url = https://github.com/elixir-lang/emacs-elixir

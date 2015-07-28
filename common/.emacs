@@ -12,6 +12,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-tomorrow/")
 (add-to-list 'load-path "~/.emacs.d/ecb/")
+(add-to-list 'load-path "~/.emacs.d/elixir/")
 (add-to-list 'load-path "~/.emacs.d/web-mode/")
 (add-to-list 'load-path "~/.emacs.d/rinari/")
 (add-to-list 'load-path "~/.emacs.d/rhtml")
@@ -48,6 +49,7 @@
 (require 'python-mode)
 (require 'color-theme-sanityinc-tomorrow)
 (require 'rust-mode)
+(require 'elixir-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -109,6 +111,8 @@
 (add-to-list 'auto-mode-alist '("\\.gitconfig\'" . gitconfig-mode))
 (add-to-list 'auto-mode-alist '("\\.gitmodules\'" . gitconfig-mode))
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+(add-to-list 'auto-mode-alist '("\\.ex\\'" . elixir-mode))
+(add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-mode))
 
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
