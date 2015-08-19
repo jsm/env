@@ -9,7 +9,7 @@
 ;; Follow symlinks
 (setq vc-follow-symlinks t)
 
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/other/")
 (add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-tomorrow/")
 (add-to-list 'load-path "~/.emacs.d/ecb/")
 (add-to-list 'load-path "~/.emacs.d/elixir/")
@@ -46,7 +46,6 @@
 (require 'gitconfig-mode)
 (require 'yasnippet)
 (require 'auto-complete-config)
-(require 'python-mode)
 (require 'color-theme-sanityinc-tomorrow)
 (require 'rust-mode)
 (require 'elixir-mode)
