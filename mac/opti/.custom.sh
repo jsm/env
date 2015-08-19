@@ -62,12 +62,9 @@ source /Users/jsm/.aws
 
 export COOKBOOK_PATH=/o/kitchen/cookbooks
 
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/jsm/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
 source /o/optimizely/.source_this.sh
 
+# RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -80,3 +77,8 @@ source '/usr/local/google-cloud-sdk/completion.bash.inc'
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/usr/local/google-cloud-sdk/path.bash.inc'
+
+# Dinghy
+export DOCKER_HOST=tcp://127.0.0.1:2376
+export DOCKER_CERT_PATH=/Users/jsm/.dinghy/certs
+export DOCKER_TLS_VERIFY=1
