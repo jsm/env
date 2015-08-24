@@ -18,8 +18,6 @@ function _update_ps1() {
     echo -ne "\\033]0;${PWD##*/}\\007"
 }
 
-alias ccat=/bin/cat
-alias cat="pygmentize -g"
 alias cdo="cd /o"
 alias cdopt="cd /o/optimizely"
 alias cdops="cd /o/opstimizely-culinaryinstitute"
