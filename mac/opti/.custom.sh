@@ -2,6 +2,7 @@
 source ~/.env/rake_autocomplete.sh
 
 alias e="emacs -nw"
+alias worklog="s '/Users/jsm/Dropbox (Personal)/Documents/Work/worklog.txt'"
 
 db_deploy () {
     bundle exec rake db:reset
@@ -19,11 +20,11 @@ function _update_ps1() {
 }
 
 alias cdo="cd /o"
-alias cdopt="cd /o/optimizely"
-alias cdops="cd /o/opstimizely-culinaryinstitute"
-alias cdok="cd /o/kitchen"
-alias cdor="cd /o/optimizelyrake"
-alias gate="tail /o/optimizely/doc/gatekeeper.md"
+alias cdopt="cd ~/work/optimizely"
+alias cdops="cd ~/work/opstimizely-culinaryinstitute"
+alias cdok="cd ~/work/kitchen"
+alias cdor="cd ~/work/optimizelyrake"
+alias gate="tail ~/work/optimizely/doc/gatekeeper.md"
 
 export PROMPT_COMMAND="_update_ps1"
 
@@ -39,18 +40,17 @@ export PATH=/usr/local/sbin:$PATH
 
 export PATH=$PATH:$(find -L "/bin" -type d | sed "/\/\\./d" | tr "\n" ":" | sed "s/:$//")
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-export PATH=/o/optimizely/out:$PATH
-export PATH=/o/optimizely/out/ec2_api_tools/bin:$PATH
-export EC2_HOME=/o/optimizely/out/ec2_api_tools
-
+export PATH=~/work/optimizely/out:$PATH
+export PATH=~/work/optimizely/out/ec2_api_tools/bin:$PATH
+export EC2_HOME=~/work/optimizely/out/ec2_api_tools
 
 ssh-add ~/.ssh/id_rsa_optimizely
 
 # Add arcanist to PATH environment variable
-export PATH=/o/mytools/arcanist/bin:$PATH
+export PATH=~/work/mytools/arcanist/bin:$PATH
 
 # Add tab completion at the command-line
-source /o/mytools/arcanist/resources/shell/bash-completion
+source ~/work/mytools/arcanist/resources/shell/bash-completion
 
 # added by travis gem
 [ -f /Users/jsm/.travis/travis.sh ] && source /Users/jsm/.travis/travis.sh
@@ -58,9 +58,9 @@ source /o/mytools/arcanist/resources/shell/bash-completion
 #AWS CLI
 source /Users/jsm/.aws
 
-export COOKBOOK_PATH=/o/kitchen/cookbooks
+export COOKBOOK_PATH=~/work/kitchen/cookbooks
 
-source /o/optimizely/.source_this.sh
+source ~/work/optimizely/.source_this.sh
 
 # RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
