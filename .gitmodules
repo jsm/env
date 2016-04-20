@@ -46,3 +46,6 @@
 [submodule "common/.emacs.d/elixir"]
 	path = common/.emacs.d/elixir
 	url = https://github.com/elixir-lang/emacs-elixir
+[submodule "common/.emacs.d/dockerfile-mode"]
+	path = common/.emacs.d/dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode.git

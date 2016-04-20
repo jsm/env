@@ -26,6 +26,7 @@
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/rust-mode")
+(add-to-list 'load-path "~/.emacs.d/dockerfile-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -49,6 +50,7 @@
 (require 'color-theme-sanityinc-tomorrow)
 (require 'rust-mode)
 (require 'elixir-mode)
+(require 'dockerfile-mode)
 (load "ws-trim")
 
 (ido-mode t)
@@ -112,6 +114,7 @@
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 (add-to-list 'auto-mode-alist '("\\.ex\\'" . elixir-mode))
 (add-to-list 'auto-mode-alist '("\\.exs\\'" . elixir-mode))
+(add-to-list 'auto-mode-alist '("\\Dockerfile\\'" . dockerfile-mode))
 
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
