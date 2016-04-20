@@ -1,3 +1,5 @@
+source ~/work/optimizely/.source_this.sh
+
 # Rake autocomplete
 source ~/.env/rake_autocomplete.sh
 
@@ -38,12 +40,6 @@ export PATH=/Users/jsm/Library/Python/2.7/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-export PATH=$PATH:$(find -L "/bin" -type d | sed "/\/\\./d" | tr "\n" ":" | sed "s/:$//")
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
-export PATH=~/work/optimizely/out:$PATH
-export PATH=~/work/optimizely/out/ec2_api_tools/bin:$PATH
-export EC2_HOME=~/work/optimizely/out/ec2_api_tools
-
 ssh-add ~/.ssh/id_rsa_optimizely
 
 # Add arcanist to PATH environment variable
@@ -55,12 +51,7 @@ source ~/work/mytools/arcanist/resources/shell/bash-completion
 # added by travis gem
 [ -f /Users/jsm/.travis/travis.sh ] && source /Users/jsm/.travis/travis.sh
 
-#AWS CLI
-source /Users/jsm/.aws
-
 export COOKBOOK_PATH=~/work/kitchen/cookbooks
-
-source ~/work/optimizely/.source_this.sh
 
 # RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -71,12 +62,10 @@ alias bfg="java -jar ~/Applications/bfg.jar"
 export EDITOR="emacs -q -l ~/.emacs.slim"
 
 # The next line enables shell command completion for gcloud.
-source '/usr/local/google-cloud-sdk/completion.bash.inc'
+source "$HOME/.google-cloud-sdk/completion.bash.inc"
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/usr/local/google-cloud-sdk/path.bash.inc'
+source "$HOME/.google-cloud-sdk/path.bash.inc"
 
-# Dinghy
-export DOCKER_HOST=tcp://127.0.0.1:2376
-export DOCKER_CERT_PATH=/Users/jsm/.dinghy/certs
-export DOCKER_TLS_VERIFY=1
+# Docker Toolbox
+eval $(/usr/local/bin/docker-machine env default)
