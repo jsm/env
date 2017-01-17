@@ -1,4 +1,5 @@
 source ~/work/optimizely/.source_this.sh
+source ~/work/primordia/.source_this.sh
 
 # Rake autocomplete
 source ~/.env/rake_autocomplete.sh
@@ -69,6 +70,3 @@ source "$HOME/.google-cloud-sdk/path.bash.inc"
 
 # Android Studio
 export PATH=$PATH:/Users/jsm/Library/Android/sdk/platform-tools
-
-# Primordia
-source /Users/jsm/work/primordia/.source_this.sh
