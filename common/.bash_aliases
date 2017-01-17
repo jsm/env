@@ -40,3 +40,6 @@ alias slem="emacs -q -l ~/.emacs.slim"
 alias s="e -q -l ~/.emacs.slim"
 
 alias kit="kitchen"
+
+alias dcc="docker-compose"
+alias dxec="docker exec -it"

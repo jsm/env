@@ -67,5 +67,8 @@ source "$HOME/.google-cloud-sdk/completion.bash.inc"
 # The next line updates PATH for the Google Cloud SDK.
 source "$HOME/.google-cloud-sdk/path.bash.inc"
 
-# Docker Toolbox
-eval $(/usr/local/bin/docker-machine env default)
+# Android Studio
+export PATH=$PATH:/Users/jsm/Library/Android/sdk/platform-tools
+
+# Primordia
+source /Users/jsm/work/primordia/.source_this.sh
