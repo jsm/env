@@ -1,6 +1,8 @@
 
 gr () {
-    cd $(git rev-parse --show-toplevel)
+    if GIT_ROOT=$(git rev-parse --show-toplevel); then
+        cd $GIT_ROOT
+    fi
 }
 
 search () {
