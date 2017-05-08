@@ -27,4 +27,7 @@ alias python="/usr/local/bin/python3"
 export ANDROID_HOME="/Users/jsm/Library/Android/sdk"
 
 # Firebase
-export PERSONAL_FIREBASE_PROJECT_ID=huddleup-jsm
+export FIREBASE_PROJECT_ID=huddleup-jsm
+
+# Android Studio
+export PATH=$PATH:/Users/jsm/Library/Android/sdk/platform-tools

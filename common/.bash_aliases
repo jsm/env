@@ -20,3 +20,5 @@ alias s="e -q -l ~/.emacs.slim"
 
 alias dcc="docker-compose"
 alias dxec="docker exec -it"
+
+alias md="macdown"
