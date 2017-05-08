@@ -27,6 +27,7 @@
 (add-to-list 'load-path "~/.emacs.d/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/rust-mode")
 (add-to-list 'load-path "~/.emacs.d/dockerfile-mode")
+(add-to-list 'load-path "~/.emacs.d/go-mode")
 
 ;; load some files
 (require 'rinari) ;; Rinari
@@ -51,6 +52,7 @@
 (require 'rust-mode)
 (require 'elixir-mode)
 (require 'dockerfile-mode)
+(require 'go-mode-autoloads)
 (load "ws-trim")
 
 (ido-mode t)
