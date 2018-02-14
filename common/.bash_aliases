@@ -22,3 +22,5 @@ alias dcc="docker-compose"
 alias dxec="docker exec -it"
 
 alias md="macdown"
+
+alias adbr="adb reverse tcp:8081 tcp:8081"

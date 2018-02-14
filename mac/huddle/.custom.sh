@@ -10,7 +10,7 @@ function _update_ps1() {
 
 export PROMPT_COMMAND="_update_ps1"
 
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa_huddleup
 
 # RBENV
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -28,6 +28,14 @@ export ANDROID_HOME="/Users/jsm/Library/Android/sdk"
 
 # Firebase
 export FIREBASE_PROJECT_ID=huddleup-jsm
+export HUDDLEBOT_FIREBASE_KEY="-L4DKVBZlCVk0QNMGPGq"
 
 # Android Studio
 export PATH=$PATH:/Users/jsm/Library/Android/sdk/platform-tools
+
+# Go
+export GOPATH=/Users/jsm/go
+export PATH=$PATH:$GOPATH/bin
+
+# Huddle
+alias cdb="cd $GOPATH/src/github.com/letshuddleup/backend"
