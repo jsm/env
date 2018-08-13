@@ -39,3 +39,7 @@ export PATH=$PATH:$GOPATH/bin
 
 # Huddle
 alias cdb="cd $GOPATH/src/github.com/letshuddleup/backend"
+alias cdg="cd $GOPATH/src/github.com/letshuddleup/gode"
+
+# Electron Forge
+[ -f /Users/jsm/.nvm/versions/node/v8.9.4/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash ] && . /Users/jsm/.nvm/versions/node/v8.9.4/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.bash
