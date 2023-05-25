@@ -10,6 +10,7 @@ alias cdenv="cd ~/repos/env"
 alias cdw="cd ~/work"
 alias myenv="cd -P ~/.env"
 alias cdj="cd $GOPATH/src/github.com/jsm"
+alias cds="cd ~/work/backend/go/src/github.com/jsm/singularity"
 
 alias ch="choose"
 
@@ -28,3 +29,6 @@ alias adbr="adb reverse tcp:8081 tcp:8081"
 
 alias r="ruby"
 alias nr="npm run"
+
+alias gl="goland"
+alias code="/usr/local/bin/code"
