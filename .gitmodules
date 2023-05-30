@@ -3,7 +3,7 @@
 	url = https://github.com/fxbois/web-mode.git
 [submodule "rinari"]
     path = common/.emacs.d/rinari
-	url = git://github.com/eschulte/rinari.git
+	url = https://github.com/eschulte/rinari.git
 [submodule "rhtml"]
     path = common/.emacs.d/rhtml
 	url = https://github.com/eschulte/rhtml.git
@@ -21,10 +21,10 @@
 	url = https://github.com/defunkt/coffee-mode.git
 [submodule "nginx-mode"]
 	path = common/.emacs.d/nginx-mode
-	url = git://github.com/ajc/nginx-mode.git
+	url = https://github.com/ajc/nginx-mode.git
 [submodule "scss-mode"]
 	path = common/.emacs.d/scss-mode
-	url = git://github.com/antonj/scss-mode.git
+	url = https://github.com/antonj/scss-mode.git
 [submodule "yaml-mode"]
 	path = common/.emacs.d/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode.git
