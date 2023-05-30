@@ -43,3 +43,7 @@ ggc () {
     break
     done
 }
+
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export BASH_SILENCE_DEPRECATION_WARNING=1”

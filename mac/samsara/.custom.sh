@@ -13,7 +13,7 @@ function acon() {
 
 function _update_ps1() {
     #    export PS1="$(~/.powerline-shell.py $?)"
-    export PS1="$(/Users/jonsanmiguel/work/backend/go/bin/powerline-go -theme ~/repos/env/common/powerline-theme.json -modules user,ssh,cwd,gitlite,exit,root -path-aliases \~/work/backend/go/src=@go/src -error $?)"
+    export PS1="$(/Users/jon.sanmiguel/work/backend/go/bin/powerline-go -theme ~/repos/env/common/powerline-theme.json -modules user,ssh,cwd,gitlite,exit,root -path-aliases \~/work/backend/go/src=@go/src -error $?)"
 #     echo -ne "\\033]0;${PWD##*/}\\007"
 }
 
@@ -38,3 +38,5 @@ macdown() {
 #eval "$(pyenv init -)"
 
 ulimit -n 16384
+
+export PATH=$PATH:/Users/jon.sanmiguel/Library/Application\ Support/JetBrains/Toolbox/scripts
