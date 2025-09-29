@@ -233,8 +233,12 @@
   (interactive "p")
   (move-line (if (null n) 1 n)))
 
+(keymap-global-set "M-<up>" 'move-line-up)
+(keymap-global-set "M-<down>" 'move-line-down)
 (global-set-key (kbd "ESC <up>") 'move-line-up)
 (global-set-key (kbd "ESC <down>") 'move-line-down)
+  (map! "<M-up>"    #'move-line-up
+        "<M-down>"  #'move-line-down)
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 

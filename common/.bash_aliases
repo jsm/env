@@ -32,3 +32,4 @@ alias nr="npm run"
 
 alias gl="goland"
 alias code="/usr/local/bin/code"
+alias c="/usr/local/bin/code"
